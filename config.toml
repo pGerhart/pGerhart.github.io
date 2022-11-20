@@ -4,17 +4,13 @@ title = "Paul Gerhart"
 theme = "Freiberuf"
 # disable language
 disableLanguages = []
+contentDir = "content"
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "About"
 url = "#about"
 weight = 1
-
-[[Languages.en.menu.main]]
-name = "Education"
-url = "#education"
-weight = 2
 
 [[Languages.en.menu.main]]
 name = "Publications"
@@ -31,7 +27,6 @@ name = "Community Service"
 url = "#commservice"
 weight = 5
 
-
 [[Languages.en.menu.main]]
 name = "Imprint"
 url = "imprint"
@@ -47,11 +42,6 @@ weight = 12
 name = "Über Mich"
 url = "#about"
 weight = 1
-
-[[Languages.de.menu.main]]
-name = "Ausbildung"
-url = "#education"
-weight = 2
 
 [[Languages.de.menu.main]]
 name = "Publikationen"
@@ -80,7 +70,7 @@ weight = 12
 
 ############################# Default Parameters ##########################
 [params]
-logo = "/images/logo/logo.svg"
+logo = "images/logo/logo.svg"
 author = "Paul Gerhart"
 
 
@@ -88,7 +78,7 @@ author = "Paul Gerhart"
 [Languages.en]
 languageName = "En"
 languageCode = "en-us"
-contentDir = "content/english"
+#contentDir = "content/english"
 weight = 1
 home = "Home"
 copyright = "Copyright &copy; 2022 Paul Gerhart"
@@ -97,7 +87,7 @@ copyright = "Copyright &copy; 2022 Paul Gerhart"
 [Languages.de]
 languageName = "De"
 languageCode = "de-de"
-contentDir = "content/german"
+#contentDir = "content/german"
 weight = 2
 home = "Home"
 copyright = "Copyright &copy; 2022 Paul Gerhart"

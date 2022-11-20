@@ -3,20 +3,25 @@ about:
   enable : true
   image : images/me/team-1.jpg
   title :  About Me
-  content : My name is Paul Gerhart and I am a researcher and freelancer with special interest in cryptography, security, privacy and anonymity.
+  content : My name is Paul Gerhart and I am a researcher and freelancer. My main field is cryptography where i study fair exchange, optimized blockchain protocols and differential privacy.
   feature_item : 
     - title : Cryptography 
       icon : ti-lock
-      content : Crytpgraphy is a fascinating field. Especially because one would never image that most of the primitives can be realized.
-      
-    - title : Security
-      icon : ti-search 
-      content : IT-Security 
+      content : "Cryptography is my passion because it combines the two fields I like at most: Mathmatics and Computer Science.
+                 Cryptography allows us to build primitives so strong, one would think these could never exist like Zero-Knowledge Proofs or Secure Multi-Party-Computation schemes.
+                "
       
     - title : Privacy
       icon : ti-id-badge 
-      content : The emerging complexity of modern world applications oftenly neglect the privacy of the users. My goal is to secure all users privacy by using cryptographic schemes in a way that the full funcitonality of the application can be achieved.
+      content : The emerging complexity of modern world applications oftenly neglect the users privacy. My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full funcitonality of the application can be achieved while securing the users privacy.
 
-    - title : Anonymity 
+    - title : IT-Forensics 
       icon : ti-thought 
-      content : I am interested to enable research on sensitive fields. However, the personal rights of the 
+      content : " IT-Forensics 
+                "
+    
+    - title : IT-Security
+      icon : ti-search 
+      content : "IT-Security . From secure design to finding bugs 
+                "
+      
