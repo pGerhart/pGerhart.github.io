@@ -17,7 +17,7 @@
         <div class="card-body">
             <h3 class="card-title"><i class="ti-user"></i> {{ .title | markdownify }}</h3>
             <div class="container">
-                <p>{{ .content | markdownify }}</p>
+                <p class="blocksatz">{{ .content | markdownify }}</p>
                 <div class="row">
                     {{ range .feature_item }}
                     <div class="col-md-6">
