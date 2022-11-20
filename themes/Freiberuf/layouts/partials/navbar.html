@@ -4,7 +4,6 @@
         <div class="text-secondary">
             <img src="{{ site.Params.logo | relURL }}" loading="lazy" height="42" alt="{{ .Site.Title }}">
             <span style="vertical-align:middle">{{ site.Title }}</span>
-            
         {{ else }}
         {{ site.Title }}
         {{ end }}
@@ -22,7 +21,7 @@
 
             {{ if lt .Weight 10 }}
             <li class="nav-item ">
-                <a class='nav-link {{ if eq .URL $currentPage }} active {{ end }}' href="{{ .URL }}">
+                <a class='nav-link {{ if eq .URL $currentPage }} active {{ end }}' href="{{ .URL }}" data-target='{{ replace .URL "/" "" }}'>
                     {{ .Name }}
                 </a>
             </li>
