@@ -1,3 +1,14 @@
 body {
         padding-top: 70px;
     }
+
+.big-icon{
+    /*font-size: 2em;*/
+    font-weight: 600;
+
+    }
+
+p{
+        text-align: justify;
+        text-justify: auto;  
+}
