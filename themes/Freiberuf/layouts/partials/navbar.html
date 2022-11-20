@@ -3,11 +3,12 @@
         {{ if site.Params.logo }}
         <div class="text-secondary">
             <img src="{{ site.Params.logo | relURL }}" loading="lazy" height="42" alt="{{ .Site.Title }}">
-            {{ site.Title }}
-        </div>
+            <span style="vertical-align:middle">{{ site.Title }}</span>
+            
         {{ else }}
         {{ site.Title }}
         {{ end }}
+        </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
