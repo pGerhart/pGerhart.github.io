@@ -3,17 +3,22 @@ about:
   enable : true
   image : images/me/team-1.jpg
   title :  About Me
-  content : My name is Paul Gerhart and I am a researcher and freelancer. My main field is cryptography where i study fair exchange, optimized blockchain protocols and differential privacy.
+  content : My name is Paul Gerhart and I am a researcher and freelancer. My main field is cryptography where I study fair exchange, optimized blockchain protocols and differential privacy.
   feature_item : 
     - title : Cryptography 
       icon : ti-lock
       content : "Cryptography is my passion because it combines the two fields I like at most: Mathmatics and Computer Science.
-                 Cryptography allows us to build primitives so strong, one would think these could never exist like Zero-Knowledge Proofs or Secure Multi-Party-Computation schemes.
+                 Cryptography allows us to build primitives so strong, one would think these could never exist like Zero-Knowledge Proofs (ZKPs).
+                 Even if these ZKPs are so strong, there are really neat and elegant solutions that use the art of mathematics to achieve security.
                 "
       
     - title : Privacy
       icon : ti-id-badge 
-      content : The emerging complexity of modern world applications oftenly neglect the users privacy. My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full funcitonality of the application can be achieved while securing the users privacy.
+      content : "The emerging complexity of modern world applications oftenly neglect the users privacy. 
+                 My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full funcitonality 
+                 of the application can be achieved while securing the users privacy.
+                 An impressive cryptographic construction that achieves this goal is Differential Privacy.
+                "
 
     - title : IT-Forensics 
       icon : ti-thought 

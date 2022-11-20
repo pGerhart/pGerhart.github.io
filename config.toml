@@ -32,11 +32,6 @@ name = "Imprint"
 url = "imprint"
 weight = 11 
 
-[[Languages.en.menu.main]]
-name = "Privacy"
-url = "privacy"
-weight = 12 
-
 ################### German Navigation ########################
 [[Languages.de.menu.main]]
 name = "Über Mich"
@@ -63,15 +58,11 @@ name = "Impressum"
 url = "imprint"
 weight = 11 
 
-[[Languages.de.menu.main]]
-name = "Datenschutz"
-url = "privacy"
-weight = 12 
-
 ############################# Default Parameters ##########################
 [params]
 logo = "images/logo/logo.svg"
 author = "Paul Gerhart"
+ustid = ""
 
 
 ################################ English Language ########################
