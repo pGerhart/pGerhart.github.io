@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://demo.gethugothemes.com"
+baseURL = "https://pgerhart.github.io"
 title = "Paul Gerhart"
 theme = "Freiberuf"
 # disable language
