@@ -15,19 +15,19 @@
 
     <div class="card w-100 h-100">
         <div class="card-body">
-            <h3 class="card-title">{{ .title | markdownify }}</h3>
+            <h3 class="card-title"><i class="ti-user"></i> {{ .title | markdownify }}</h3>
             <div class="container">
                 <p>{{ .content | markdownify }}</p>
                 <div class="row">
                     {{ range .feature_item }}
                     <div class="col-md-6">
                         <div class="row">
-                            <div class="col-md-2">
-                                <h1> <i class="{{ .icon }}"></i> </h1>
-                            </div>
-                            <div class="col-md-10">
-                                <h4> {{ .title | markdownify }}</h4>
-                                <p>{{ .content | markdownify }}</p>
+                            <div class="col-md-12">
+                                <h4> <i class="{{ .icon }}"></i> 
+                                    {{ .title | markdownify }}</h4>
+                                    <div class="container">
+                                <p class="blocksatz">{{ .content | markdownify }}</p>
+                                    </div>
                             </div>
                         </div>
                     </div>
