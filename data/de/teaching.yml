@@ -1,0 +1,8 @@
+teaching:
+  enable : true
+  title: Lehre
+  list :
+    - subject : Einführung in die moderne Kryptographie
+      years : WS 22/23
+
+

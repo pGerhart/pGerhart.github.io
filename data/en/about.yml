@@ -1,0 +1,22 @@
+############################# feature ###################################
+about:
+  enable : true
+  image : images/me/team-1.jpg
+  title :  About Me
+  content : My name is Paul Gerhart and I am a researcher and freelancer with special interest in cryptography, security, privacy and anonymity.
+  feature_item : 
+    - title : Cryptography 
+      icon : ti-lock
+      content : Crytpgraphy is a fascinating field. Especially because one would never image that most of the primitives can be realized.
+      
+    - title : Security
+      icon : ti-search 
+      content : IT-Security 
+      
+    - title : Privacy
+      icon : ti-id-badge 
+      content : The emerging complexity of modern world applications oftenly neglect the privacy of the users. My goal is to secure all users privacy by using cryptographic schemes in a way that the full funcitonality of the application can be achieved.
+
+    - title : Anonymity 
+      icon : ti-thought 
+      content : I am interested to enable research on sensitive fields. However, the personal rights of the 

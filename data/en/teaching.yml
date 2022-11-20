@@ -1,0 +1,8 @@
+teaching:
+  enable : true
+  title: Teaching
+  list :
+    - subject : Introduction to Modern Cryptography
+      years : WS 22/23
+
+

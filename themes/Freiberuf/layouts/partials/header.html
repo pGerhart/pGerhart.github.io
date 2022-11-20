@@ -1,0 +1,31 @@
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand text-secondary" href="{{ .Site.BaseURL | relLangURL }}">
+            {{ if site.Params.logo }}
+                <img src="{{ site.Params.logo | relURL }}" loading="lazy" height="42" alt="{{ .Site.Title }}">
+                {{ site.Title }}
+             {{ else }}
+            {{ site.Title }}
+            {{ end }}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main.ByWeight }}
+
+                {{ if lt .Weight 10 }}
+                <li class="nav-item ">
+                    <a class='nav-link {{ if eq .URL $currentPage }} active {{ end }}'
+                    href="{{ .URL }}">
+                     {{ .Name }}
+                  </a>
+                </li>
+                {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </nav>

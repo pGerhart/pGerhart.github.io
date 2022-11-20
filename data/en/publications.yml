@@ -1,0 +1,16 @@
+publications : 
+  enable : true
+  title: Publications
+  list : 
+      - title : A General Approach to Adaptor Sigantures
+        authors : Paul Gerhart, Dominique Schröder, Sri AravindaKrishnan Thyagarajan, and Pratik Soni
+        published : Eurocrypt 2023
+        url : https://test.test.de
+      - title : A General Approach to Adaptor Sigantures
+        authors : Paul Gerhart, Dominique Schröder, Sri AravindaKrishnan Thyagarajan, and Pratik Soni
+        published : Eurocrypt 2023
+        url : https://test.test.de
+      - title : Visual Anon
+        authors : Pascal Berrang, Paul Gerhart, and Dominique Schröder
+        published : Anonymity Project started in 2022
+        url : https://www.visualanon.de

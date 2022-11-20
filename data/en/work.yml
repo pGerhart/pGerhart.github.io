@@ -1,0 +1,17 @@
+work:
+  enable : true
+  title : Work
+  items :
+    - name : Freelancer
+      date : 12/2022 - now
+      topics : Software Development, Consulting, Apprisals
+
+    - name : Scientific Employee
+      date : 08/2022 - now
+      topics : Applied Cryptography
+      employer : Friedrich-Alexander University Erlangen-Nürnberg
+
+    - name : Student Employee
+      date : 10/2017 - 07/2022
+      topics : Software Development
+      employer : Richard Wenzel GmbH & Co.KG

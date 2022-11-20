@@ -1,0 +1,25 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.education.education.enable }}
+{{ with $data.education.education }}
+<div class="col-lg-6 pt-4">
+    <div class="card h-100">
+        <div class="card-body">
+            <h3 class="card-title">{{ .title | markdownify }}</h3>
+            <div class="container">
+                {{ range .items }}
+                <div class="row">
+                    <div class="col-md-12 pt-4">
+                        <h5>{{ .degree }} in {{ .subject }} </h5>
+                        <h6>{{ .institution }}</h6>
+                        <p>{{ .date }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{ end }}
+{{ end }}

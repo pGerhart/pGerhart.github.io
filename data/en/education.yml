@@ -1,0 +1,18 @@
+education:
+  enable : true
+  title: Education
+  items:
+  - date : 08/2022 - now
+    institution : Friedrich-Alexander University Erlangen-Nürnberg 
+    degree : Dr-Ing.
+    subject : Cryptography
+  
+  - date : 10/2020 - 07/2022
+    institution : Friedrich-Alexander University Erlangen-Nürnberg
+    degree : Master of Science
+    subject : Computer Science
+
+  - date : 10/2017 - 09/2020
+    institution : University of Bonn
+    degree : Bachelor of Science
+    subject : Mathematics
