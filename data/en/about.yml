@@ -7,7 +7,7 @@ about:
   feature_item : 
     - title : Cryptography 
       icon : ti-lock
-      content : "Cryptography is my passion because it combines the two fields I like at most: Mathmatics and Computer Science.
+      content : "Cryptography is my passion as it combines the two fields I like at most: Mathmatics and Computer Science.
                  Cryptography allows us to build primitives so strong, one would think these could never exist like Zero-Knowledge Proofs (ZKPs).
                  Even if these ZKPs are so strong, there are really neat and elegant solutions that use the art of mathematics to achieve security.
                 "
