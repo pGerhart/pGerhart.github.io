@@ -11,4 +11,5 @@ body {
 .blocksatz{
         text-align: justify;
         text-justify: auto;  
+        /*word-break: break-all;*/
 }
