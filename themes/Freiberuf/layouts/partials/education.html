@@ -1,17 +1,19 @@
 {{ $data := index site.Data site.Language.Lang }}
-{{ if $data.education.education.enable }}
 {{ with $data.education.education }}
 <div class="col-lg-6 pt-4">
     <div class="card h-100">
         <div class="card-body">
-            <h3 class="card-title"><i class="ti-write"></i> {{ .title | markdownify }}</h3>
+            <s5><i class="ti-write"></i> {{ .title | markdownify }}</s5>
             <div class="container">
                 {{ range .items }}
                 <div class="row">
                     <div class="col-md-12 pt-4">
-                        <h5>{{ .degree }} in {{ .subject }} </h5>
-                        <h6>{{ .institution }}</h6>
-                        <p>{{ .date }}</p>
+                        <s2>{{ .degree }} in {{ .subject }} </s2>
+                        <s3>{{ .institution }}</s3>
+                        {{ if .topics }}
+                        <s1>{{ .topics }} </s1>
+                        {{ end }}
+                        <s1>{{ .date }}</s1>
                     </div>
                 </div>
                 {{ end }}
@@ -19,7 +21,4 @@
         </div>
     </div>
 </div>
-
-
-{{ end }}
 {{ end }}

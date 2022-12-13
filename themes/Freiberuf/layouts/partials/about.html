@@ -1,5 +1,4 @@
 {{ $data := index site.Data site.Language.Lang }}
-{{ if $data.about.about.enable }}
 {{ with $data.about.about }}
 <div class="col-lg-4 pt-4">
     <div class="row">
@@ -15,7 +14,7 @@
 
     <div class="card w-100 h-100">
         <div class="card-body">
-            <h3 class="card-title"><i class="ti-user"></i> {{ .title | markdownify }}</h3>
+            <s5 class="card-title"><i class="ti-user"></i> {{ .title | markdownify }}</s5>
             <div class="container">
                 <p class="blocksatz">{{ .content | markdownify }}</p>
                 <div class="row">
@@ -37,6 +36,4 @@
         </div>
     </div>
 </div>
-
-{{ end }}
 {{ end }}

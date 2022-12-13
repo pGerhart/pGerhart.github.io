@@ -1,17 +1,17 @@
 {{ $data := index site.Data site.Language.Lang }}
-{{ if $data.teaching.teaching.enable }}
 {{ with $data.teaching.teaching }}
 <div class="col-lg-12">
     <div class="card">
         <div class="card-body">
-            <h3 class="card-title"><i class="ti-blackboard"></i> {{ .title | markdownify }}</h3>
+            <s5><i class="ti-blackboard"></i> {{ .title | markdownify }}</s5>
             <div class="container">
-                {{ range .list }}
+                {{ range .items }}
                 <div class="row">
                     <div class="col-lg-12 pt-4">
-                        <h5>{{ .subject }}</h5>
+                        <s2>{{ .subject }}</s2>
                         <div class="container">
-                            <p>{{ .years }}</p>
+                            <s1>{{ .semester }}</s1>
+                            <s1>{{ .position }}</s1>
                         </div>
                     </div>
                 </div>
@@ -20,5 +20,4 @@
         </div>
     </div>
 </div>
-{{ end }}
 {{ end }}

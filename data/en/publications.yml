@@ -1,8 +1,18 @@
 publications : 
-  enable : true
   title: Publications
-  list : 
+  items : 
       - title : Visual Anon
+        date : 2022 
         authors : Pascal Berrang, Paul Gerhart, and Dominique Schröder
         published : Anonymity Project started in 2022
-        url : https://www.visualanon.de
+        url : "https://www.visualanon.de"
+      - title: A General Approach to Adaptor Signatures
+        date : July 2022
+        authors : supervised by Dominique Schröder, Sri AravindaKrishnan Thyagarajan, and Pratik Soni
+        published : Master Thesis
+      - title : Surgery and a Theorem of Lickorish
+        date : July 2020
+        authors : supervised by Wolfgang Lück and Christoph Winges
+        published : Bachelor Thesis
+        main_results : "Tightened the Lickorish-Wallace theorem to only use Dehn-surgeries with 
+surgery-coefficients of |1|."

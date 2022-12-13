@@ -1,22 +1,14 @@
 ############################# feature ###################################
 about:
-  enable : true
   image : images/me/team-1.jpg
   title :  Über Mich
-  content : Mein Name ist Paul Gerhart. Ich bin Wissenschaftler und Freiberufler in den Schwerpunkten Kryptographie, IT-Sicherheit, Privatsphäre and Anonymität.
+  content : "Mein Name ist Paul Gerhart. Ich bin Wissenschaftler und Freiberufler in den Schwerpunkten Kryptographie, IT-Sicherheit, Privatsphäre and Anonymität."
   feature_item : 
     - title : Kryptographie 
       icon : ti-lock
-      content : 
-      
-    - title : IT-Sicherheit
-      icon : ti-search 
       content : 
       
     - title : Privatsphäre
       icon : ti-id-badge 
       content : 
 
-    - title : Anonymität 
-      icon : ti-thought 
-      content : 

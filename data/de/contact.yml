@@ -1,27 +1,15 @@
 ############################## Contact #############################
 contact:
-  enable : true
   title : Kontakt 
   # Contact details
-  list:
-    - icon : ti-id-badge
-      info : "Paul Gerhart"
-
-    - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Artilleriestr. 14, 91052 Erlangen"
-      
-    - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
-      description: "Mobil"
-      info : "+49 1517 0633852"
-      
-    - icon : ti-email # themify icon pack : https://themify.me/themify-icons
-      description : "Email"
-      info : "paul.gerhart [at] mailbox.org"
-    
-    - icon : ti-lock 
-      description : "PGP" 
-      info : "xxx"
-
-    - icon : ti-receipt # themify icon pack : https://themify.me/themify-icons
-      info : "UStID: xxx"
-
+  last_name : Gerhart
+  first_name : Paul 
+  address_1 : "Artilleriestr. 14"
+  address_2 : "91052 Erlangen"
+  phone : "+49 1515 1706976"
+  phone_description : "Mobil"
+  email : "paul.gerhart@mailbox.org"
+  email_anon : "paul.gerhart [at] mailbox.org"
+  homepage : "https://pgerhart.github.io"
+  ust_id : "xxx"
+  ust_id_description : "UstID"

@@ -1,17 +1,16 @@
 {{ $data := index site.Data site.Language.Lang }}
-{{ if $data.publications.publications.enable }}
 {{ with $data.publications.publications }}
 <div class="col-lg-12">
     <div class="card">
         <div class="card-body">
-            <h3 class="card-title"><i class="ti-files"></i> {{ .title | markdownify }}</h3>
+            <s5><i class="ti-files"></i> {{ .title | markdownify }}</s5>
             <div class="container">
-                {{ range .list }}
+                {{ range .items }}
                 <div class="row">
                     <div class="col-lg-12 pt-4">
-                        <h5>{{ .title }}</h5>
-                        <h6>{{ .authors }}</h6>
-                        <h7>{{ .published }}</h7><br>
+                        <s2>{{ .title }}</s2>
+                        <s3>{{ .authors }}</s3>
+                        <s1>{{ .published }}</s1>
                         <a href="{{ .url }}" class="text-secondary">{{ .url }}</a>
                     </div>
                 </div>
@@ -20,5 +19,4 @@
         </div>
     </div>
 </div>
-{{ end }}
 {{ end }}

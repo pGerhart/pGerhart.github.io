@@ -1,5 +1,4 @@
 work:
-  enable : true
   title : Work
   items :
     - name : Freelancer

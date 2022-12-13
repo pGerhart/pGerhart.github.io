@@ -1,24 +1,24 @@
 {{ $data := index site.Data site.Language.Lang }}
-{{ if $data.communityservice.communityservice.enable }}
 {{ with $data.communityservice.communityservice }}
 <div class="col-lg-12">
     <div class="card">
         <div class="card-body">
-            <h3 class="card-title"><i class="ti-link"></i> {{ .title | markdownify }}</h3>
+            <s5><i class="ti-link"></i> {{ .title | markdownify }}</s5>
+            {{ with $data.communityservice.external_reviews }}
             <div class="container">
-                <h5 class="pt-4"> {{ .title_external_reviews }} </h5>
+                <s2 class="pt-4"> {{ .title }} </s2>
                 <div class="container">
-                    {{ range .external_reviews }}
+                    {{ range .items }}
                     <div class="row">
                         <div class="col-lg-12">
-                            <h6>{{ .conference }}</h6>
+                            <s1>{{ .conference }}</s1>
                         </div>
                     </div>
                     {{ end }}
                 </div>
             </div>
+            {{ end }}
         </div>
     </div>
 </div>
-{{ end }}
 {{ end }}

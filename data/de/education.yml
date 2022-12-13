@@ -1,5 +1,4 @@
 education:
-  enable : true
   title: Ausbildung 
   items:
   - date : 08/2022 - heute 
@@ -9,10 +8,12 @@ education:
   
   - date : 10/2020 - 07/2022
     institution : Friedrich-Alexander Universität Erlangen-Nürnberg
+    topics : Kryptographie, Privatsphäre, IT-Sicherhiet, IT-Forensik 
     degree : Master of Science
     subject : Informatik
 
   - date : 10/2017 - 09/2020
     institution : Rheinische Friedrich-Wilhelms-Universität Bonn
+    topics : Algebraische Topologie
     degree : Bachelor of Science
     subject : Mathematik

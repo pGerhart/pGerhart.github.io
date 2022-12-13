@@ -1,8 +1,8 @@
 teaching:
-  enable : true
   title: Lehre
-  list :
+  items :
     - subject : Einführung in die moderne Kryptographie
-      years : WS 22/23
+      semester : Wintersemester 22/23
+      position : Tutor
 
 

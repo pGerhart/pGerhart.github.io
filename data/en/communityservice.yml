@@ -1,11 +1,12 @@
 communityservice:
-  enable : true
   title: Community Service
-  title_external_reviews: External Reviews
-  external_reviews:
-  - conference : European Symposium on Research in Computer Security (ESORICS) 2022
-  - conference : Advances in Cryptology (ASIACRYPT) 2022
-  - conference : IEEE Computer Security Foundations Symposium (CSF) 2023
-  - conference : Eurocrypt 2023
+
+external_reviews: 
+  title: External Reviews
+  items:
+    - conference : European Symposium on Research in Computer Security (ESORICS) 2022
+    - conference : Advances in Cryptology (ASIACRYPT) 2022
+    - conference : IEEE Computer Security Foundations Symposium (CSF) 2023
+    - conference : Eurocrypt 2023
 
 

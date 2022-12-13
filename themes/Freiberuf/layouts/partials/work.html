@@ -1,17 +1,16 @@
 {{ $data := index site.Data site.Language.Lang }}
-{{ if $data.work.work.enable }}
 {{ with $data.work.work }}
 <div class="col-lg-6 pt-4">
     <div class="card h-100">
         <div class="card-body">
-            <h3 class="card-title"><i class="ti-briefcase"></i> {{ .title | markdownify }}</h3>
+            <s5><i class="ti-briefcase"></i> {{ .title | markdownify }}</s5>
             <div class="container">
                 {{ range .items }}
                 <div class="row">
                     <div class="col-md-12 pt-4">
-                    <h5>{{ .name }} </h5>
-                    <h6>{{ .topics }} </h6>
-                    <p> {{ if .employer }} {{ .employer }} <br>{{end}}{{ .date }} </p>
+                    <s2>{{ .name }} </s2>
+                    <s3>{{ .topics }} </s3>
+                    <s1> {{ if .employer }} {{ .employer }} <br>{{end}}{{ .date }} </s1>
                     </div>
                 </div>
                 {{ end }}
@@ -19,5 +18,4 @@
         </div>
     </div>
 </div>
-{{ end }}
 {{ end }}
