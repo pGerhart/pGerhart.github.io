@@ -8,18 +8,18 @@ about:
   feature_item : 
     - title : Cryptography 
       icon : ti-lock
-      content : "Cryptography is my passion as it combines the two fields I like at most: Mathmatics and Computer Science.
-                 Since Whitfield Diffie and Martin E. Hellman turned this this ancient art into a science in 1976,
-                 the security of modern cryptographic primitives can be reduced to the hardness of a mathematical problem.
-                 While the power and elegance of cryptographic tools seem like magic, 
-    
+      content : "Cryptography is my passion as it combines the two fields I like most: Mathematics and Computer Science.
+                 This is at least true since Whitfield Diffie and Martin E. Hellman turned this ancient art into science in 1976.
+                 We nowadays assume a modern cryptographic scheme is secure if the ability to break it can be used to solve a problem that we assume to be hard.
+                 While the power and elegance of cryptographic tools seem like magic because they are too strong to be possibly true, it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. Some keywords here are zero-knowledge proofs and commitment schemes.
+                 It is even more fascinating when your desired career was to be a magician as a child like it was for me.
                 "
       
     - title : Privacy
       icon : ti-id-badge 
-      content : "The emerging complexity of modern world applications oftenly neglect the users privacy. 
-                 My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full funcitonality 
-                 of the application can be achieved while securing every single users privacy.
+      content : "The emerging complexity of modern world applications often neglects the users' privacy. 
+                 My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full functionality 
+                 of the application can be achieved while securing every single user's privacy.
                  An impressive cryptographic construction that achieves this goal is Differential Privacy.
                 "
 
