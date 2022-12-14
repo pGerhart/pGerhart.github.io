@@ -1,25 +1,27 @@
 {{ define "content" }}
+{{ $data := index site.Data site.Language.Lang }}
+{{ with $data.contact.contact }}
 <div class="container pb-4">
     <div class="row">
        <div class="col-lg-12 pt-4">
         <div class='impressum'>
             <h1>Impressum</h1>
             <p>Angaben gemäß § 5 TMG</p>
-            <p>Paul Gerhart <br> 
-            Artilleriestr. 14<br> 
-            91052 Erlangen <br> 
+            <p>{{.first_name}} {{.last_name}} <br> 
+            {{.address_1}}<br> 
+            {{.address_2}}<br> 
             </p>
             <p> <strong>Vertreten durch: </strong><br>
-            Paul Gerhart<br>
+            {{.first_name}} {{.last_name}}<br>
             </p>
             <p><strong>Kontakt:</strong> <br>
-            Telefon: +49151-70633852<br>
-            E-Mail: paul.gerhart [at] mailbox.org</br></p>
+            Telefon: {{.phone}}<br>
+            E-Mail: {{.email_anon}}</br></p>
             <p><strong>Umsatzsteuer-ID: </strong> <br>
-            Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: asdf
+            Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: {{.ust_id}}
             </p>
             <h4>Haftungsausschluss: </h4>
-                <p><strong>Haftung für Inhalte</strong><br><br>
+            <p><strong>Haftung für Inhalte</strong><br><br>
             Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.<br> <br>
             <strong>Datenschutz</strong><br><br>
             Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br>
@@ -34,5 +36,5 @@
        </div>
     </div>
 </div>
-
+{{ end }}
 {{ end }}
