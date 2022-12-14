@@ -1,7 +1,7 @@
 {{ $data := index site.Data site.Language.Lang }}
 {{ with $data.work.work }}
-<div class="col-lg-6 pt-4">
-    <div class="card h-100">
+<div class="col-lg-6 pt-4 d-flex align-items-stretch">
+    <div class="card h-100 w-100">
         <div class="card-body">
             <s5><i class="ti-briefcase"></i> {{ .title | markdownify }}</s5>
             <div class="container">
