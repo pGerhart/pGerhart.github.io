@@ -8,11 +8,14 @@ about:
   feature_item : 
     - title : Cryptography 
       icon : ti-lock
-      content : "Cryptography is my passion as it combines the two fields I like most: Mathematics and Computer Science.
-                 This is at least true since Whitfield Diffie and Martin E. Hellman turned this ancient art into science in 1976.
-                 We nowadays assume a modern cryptographic scheme is secure if the ability to break it can be used to solve a problem that we assume to be hard.
-                 While the power and elegance of cryptographic tools seem like magic because they are too strong to be possibly true, it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. Some keywords here are zero-knowledge proofs and commitment schemes.
-                 It is even more fascinating when your desired career was to be a magician as a child like it was for me.
+      content : "Cryptography is my passion as it combines the two fields I like most: mathematics and computer science. 
+                 While mathematics has a long scientific background, cryptography was more of an art most of the time. 
+                 This changed when Whitfield Diffie and Martin E. Hellman turned this ancient art into science in 1976. 
+                 Since then, we assume a cryptographic scheme is secure if the ability to break it can be used to solve a problem that we assume to be hard. 
+                 While the power and elegance of modern cryptographic tools seem like magic because they are too strong to be possibly true, 
+                 it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. 
+                 Some keywords here are zero-knowledge proofs and commitment schemes. 
+                 It is even more fascinating when your desired career was to be a magician as a child, like it was for me.
                 "
       
     - title : Privacy
