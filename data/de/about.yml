@@ -6,7 +6,16 @@ about:
   feature_item : 
     - title : Kryptographie 
       icon : ti-lock
-      content : 
+      content : "Kryptographie ist meine Leidenschaft, da sie die beiden Bereiche vereint, die ich am meisten mag: Mathematik und Informatik. 
+                 Während die Mathematik einen langen wissenschaftlichen Hintergrund hat, war die Kryptografie die meiste Zeit über eher eine Kunst. 
+                 Das änderte sich, als Whitfield Diffie und Martin E. Hellman 1976 aus dieser alten Kunst eine Wissenschaft machten. 
+                 Seitdem gehen wir davon aus, dass ein kryptografisches Verfahren sicher ist, wenn die Fähigkeit, es zu knacken, 
+                 zur Lösung eines mathematischen Problems verwendet werden kann, das wir als schwierig erachten. 
+                 Während die Macht und Eleganz moderner kryptografischer Werkzeuge wie Magie erscheinen, weil sie zu stark sind, um wahr zu sein, 
+                 ist es faszinierend, wie wir sie allein durch die Schönheit von Annahmen und logischen Schlussfolgerungen realisieren können. 
+                 Einige Stichworte sind hier Null-Wissen-Beweise und Verpflichtungsschemata. 
+                 Noch faszinierender ist es, wenn man als Kind den Berufswunsch hatte, Zauberer zu werden, wie es bei mir der Fall war.
+                "
       
     - title : Privatsphäre
       icon : ti-id-badge 
