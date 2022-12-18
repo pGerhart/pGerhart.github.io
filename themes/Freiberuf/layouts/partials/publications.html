@@ -8,13 +8,49 @@
                 {{ range .items }}
                 <div class="row">
                     <div class="col-lg-12 pt-4">
-                        <s2>{{ .title }}</s2>
+                        <s2>
+                            {{ if .has_info}}
+                            <a data-bs-toggle="modal" data-bs-target="#{{ printf "%s%s" .title  .year | urlize}}" class="text-body"> {{.title}}</a>
+                            {{ else }}
+                            {{ .title }}
+                            {{ end }}
+                        </s2>
                         <s3>{{ .authors }}</s3>
                         <s1>{{ .published }}</s1>
-                        <a href="{{ .url }}" class="text-secondary">{{ .url }}</a>
+                        {{ if .url }}
+                            <a href="{{ .url }}" class="text-secondary">{{ .url }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ if .has_info }}
+                <div class="modal fade" id="{{ printf "%s%s" .title  .year | urlize}}">
+                    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5">{{ .title }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <s2>Abstract</s2>
+                                    <s1>{{.abstract | markdownify}}</s1>
+                                    <s2>Citation</s2>
+                                    <s1>{{.bibtex | markdownify}}</s1>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            -->
+                        </div>
                     </div>
                 </div>
                 {{ end }}
+                {{ end }}
+
+                
+
             </div>
         </div>
     </div>
