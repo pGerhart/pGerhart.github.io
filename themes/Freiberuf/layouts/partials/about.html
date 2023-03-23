@@ -2,7 +2,7 @@
 {{ with $data.about.about }}
 <div class="col-md-4 pt-4 ">
     <div class="card">
-        <img src="/images/me/team-1.avif" class="card-img-top img-fluid" alt="">
+        <img src="{{ .image | relURL}}" class="card-img-top img-fluid" alt="">
         {{ partial "contact.html" .}}
     </div>
 </div>
