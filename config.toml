@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://pgerhart.github.io"
+baseURL = "https://paul-gerhart.de"
 title = "Paul Gerhart"
 theme = "Freiberuf"
 # disable language
