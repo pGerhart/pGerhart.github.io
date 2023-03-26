@@ -6,11 +6,11 @@ contact:
   first_name : Paul 
   address_1 : "Artilleriestr. 14"
   address_2 : "91052 Erlangen"
-  phone : "+49 1515 1706976"
+  phone : "+49 1517 0633852" 
   phone_description : "Mobile"
-  email : "paul.gerhart@mailbox.org"
-  email_anon : "paul.gerhart [at] mailbox.org"
-  homepage : "https://pgerhart.github.io"
+  email : "info@paul-gerhart.de"
+  email_anon : "info [at] paul-gerhart.de"
+  homepage : "https://paul-gerhart.de"
   ust_id : "xxx"
   ust_id_description : "Tax ID"
 
