@@ -21,6 +21,5 @@ publications :
         has_info : true 
         abstract : "In this thesis we aim to prove that every 3-manifold M arises from a surgery on a link on  S3. In order to do that, we show the existence of a so-called Heegaard-Splitting of M and S3 of the same genus.  Now to fit the both Splittings into each other, it is required to move certain links, so-called characteristic curves, on the surfaces into each other.  To achieve this, we have to cut out solid tori and thus get a homeomorphic copy S3 without the interiors of the tori of M without another set of Tori.  Now if we glue them back in the right way, which we can regard as a Dehn surgery, we obtain a homeomorphism between M and S3."
         bibtex : "@misc{cryptoeprint:2021/150, author = {Andreas Erwig and Sebastian Faust and Kristina Hostáková and Monosij Maitra and Siavash Riahi}, title = {Two-Party Adaptor Signatures From Identification Schemes}, howpublished = {Cryptology ePrint Archive, Paper 2021/150}, year = {2021}, note = {\\url{https://eprint.iacr.org/2021/150}}, url = {https://eprint.iacr.org/2021/150} }"
-        source : "https://www.visualanon.de"
         # For CV only
         main_results : "Tightened the Lickorish-Wallace theorem to only use Dehn-surgeries with surgery-coefficients of |1|."
