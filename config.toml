@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://paul-gerhart.de"
+baseURL = "https://www.paul-gerhart.de"
 title = "Paul Gerhart"
 theme = "Freiberuf"
 # disable language
