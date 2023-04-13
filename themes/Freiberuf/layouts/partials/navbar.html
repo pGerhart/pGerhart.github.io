@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
             {{ if site.Params.logo }}
             <div class="text-secondary">
-                <img src="{{ site.Params.logo | relURL }}" loading="lazy" height="42" alt="{{ .Site.Title }}">
+                <img src="{{ site.Params.logo | relURL }}" height="42" alt="{{ .Site.Title }}">
                 <span style="vertical-align:middle">{{ site.Title }}</span>
                 {{ else }}
                 {{ site.Title }}
