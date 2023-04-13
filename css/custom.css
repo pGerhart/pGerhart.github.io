@@ -50,3 +50,13 @@ s5 { /* former h3 */
     font-size: 1.75rem;
     font-weight: 400;
   }
+
+.btn-outline-primary{
+  border-color: #2058afff;
+  color: #2058afff;
+}
+.btn-outline-primary:hover{
+  color:#fff;
+  background-color:#2058afff;
+  border-color:#2058afff
+}
