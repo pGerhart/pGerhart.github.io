@@ -1,0 +1,28 @@
+<div class="container">
+
+    <s2 class="">Abstract</s2>
+    <div class="container">
+        <s1 class="blocksatz">{{.abstract | markdownify}}</s1>
+    </div>
+    <s2 class="pt-3">Authors</s2>
+    <div class="container">
+        <s1>{{ .authors }}</s1>
+    </div>
+    <s2 class="pt-3">Published at</s2>
+    <div class="container">
+        <s1>{{ .published }}</s1>
+    </div>
+    {{ if .source }}
+    <s2 class="pt-3">Full Text</s2>
+    <div class="container">
+        <a href="{{ .source }}" class="text-secondary">{{ .source }}</a>
+    </div>
+    {{ end }}
+    {{ if .bibtex }}
+    <s2 class="pt-3">Citation</s2>
+    <div class="container">
+        <pre>{{.bibtex}}
+        </pre>
+    </div>
+    {{ end }}
+</div>
