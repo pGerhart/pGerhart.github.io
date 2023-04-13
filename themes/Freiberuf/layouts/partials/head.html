@@ -17,5 +17,8 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Paul Gerhart</title>
+    <title>{{ if .Title }} {{ .Title }} {{ else }} {{ site.Params.title }} {{end}}</title>
+    {{ if .Title }}
+    <meta name="description" content="{{ .Title }}">
+    {{ end }}
 </head>
