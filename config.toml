@@ -31,35 +31,9 @@ name = "Imprint"
 url = "imprint"
 weight = 11 
 
-################### German Navigation ########################
-[[Languages.de.menu.main]]
-name = "Über Mich"
-url = "/#about"
-weight = 1
-
-[[Languages.de.menu.main]]
-name = "Publikationen"
-url = "/#publications"
-weight = 3
-
-[[Languages.de.menu.main]]
-name = "Lehre"
-url = "/#teaching"
-weight = 4
-
-[[Languages.de.menu.main]]
-name = "Community Service"
-url = "/#commservice"
-weight = 5
-
-[[Languages.de.menu.main]]
-name = "Impressum"
-url = "imprint"
-weight = 11 
-
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo/logo.svg"
+logo = "images/logo/PGLogoHighContrast.svg"
 author = "Paul Gerhart"
 ustid = ""
 
@@ -73,11 +47,3 @@ weight = 1
 home = "Home"
 copyright = "Copyright &copy; 2022 Paul Gerhart"
 
-################################ German Language ########################
-[Languages.de]
-languageName = "De"
-languageCode = "de-de"
-contentDir = "content/german"
-weight = 2
-home = "Home"
-copyright = "Copyright &copy; 2022 Paul Gerhart"
