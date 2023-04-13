@@ -1,4 +1,0 @@
----
-title: "Imprint"
-layout: imprint
----
