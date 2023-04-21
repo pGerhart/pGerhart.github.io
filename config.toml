@@ -35,6 +35,7 @@ weight = 11
 [params]
 logo = "images/logo/PGLogoHighContrast.svg"
 author = "Paul Gerhart"
+title = "Paul Gerhart"
 ustid = ""
 
 
