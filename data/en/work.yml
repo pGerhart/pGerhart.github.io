@@ -1,9 +1,9 @@
 work:
   title : Work
   items :
-    - name : Freelancer
+    - name : Assessor
       date : 12/2022 - now
-      topics : Software Development, Consulting, Apprisals
+      topics : Cryptography, Privacy, IT-Forensics 
 
     - name : Scientific Employee
       date : 08/2022 - now
