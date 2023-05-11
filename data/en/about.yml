@@ -2,7 +2,7 @@
 about:
   image : images/me/PaulGerhart.avif
   title :  About Me
-  content : "My name is Paul Gerhart and I am a researcher and freelancer. 
+  content : "My name is Paul Gerhart and I am a researcher and assessor. 
              My main field is cryptography where I study fair exchange, 
              optimized blockchain protocols and differential privacy."
   feature_item : 
@@ -15,7 +15,7 @@ about:
                  While the power and elegance of modern cryptographic tools seem like magic because they are too strong to be possibly true, 
                  it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. 
                  Some keywords here are zero-knowledge proofs and commitment schemes. 
-                 It is even more fascinating when your desired career was to be a magician as a child, like it was for me.
+                 It is even more fascinating when your desired career was to be a magician as a child like it was for me.
                 "
       
     - title : Privacy
