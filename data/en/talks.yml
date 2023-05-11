@@ -1,0 +1,7 @@
+talks:
+  title: Talks
+  items :
+    - title: "How to Avoid Unfair Exchange: Adaptor Security Revisited"
+      year: 2023
+      stage: "IEEE S&P"
+      location: "San Francisco, CA"
