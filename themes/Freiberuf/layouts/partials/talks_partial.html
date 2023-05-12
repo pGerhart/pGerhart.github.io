@@ -5,7 +5,7 @@
         <div class="card-body">
             <s5><i class="ti-microphone"></i> Recent Talks </s5>
             <div class="container">
-                {{ range first 4 .items }}
+                {{ range first 3 .items }}
                 <div class="row">
                     <div class="col-lg-12 pt-4">
                         <s2>
@@ -17,10 +17,10 @@
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
                 <br>
                 <a class="btn btn-outline-primary" href="{{ "/talks" | relURL }}">Complete
                     List</a>
-                {{ end }}
                 <br>
             </div>
         </div>
