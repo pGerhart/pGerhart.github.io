@@ -1,3 +1,4 @@
+<footer class="mt-auto" id="footer">
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
 	<ul class="navbar-nav mx-auto">
 		{{ $currentPage := . }}
@@ -10,34 +11,8 @@
 		</li>
 		{{ end }}
 		{{ end }}
-
-		{{- if site.IsMultiLingual }}
-		<li class="nav-item ">
-			<a class="nav-link" onclick="set_lang()">
-				{{ if eq .Page.Lang "en" }}
-				German
-				{{ else }}
-				Englisch
-				{{ end }}
-			</a>
-		</li>
-		{{end}}
 	</ul>
 </nav>
-
-
+</footer>
 
 <script src="/js/bootstrap-523.bundle.min.js"></script>
-
-<script>
-	function set_lang() {
-		lang = document.documentElement.lang
-		if (lang == "en-us") {
-			if (!location.pathname.startsWith('/de')) {
-				location = "/de" + location.pathname
-			}
-		} else {
-			location = location.pathname.replace('/de/', '/')
-		}
-	}
-</script>
