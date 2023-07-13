@@ -1,0 +1,9 @@
+research_visits:
+  title: Research Visits
+  items :
+    - role: "Research Internship"
+      date: "08/2023 - 10/2023"
+      university: "University of Maryland"
+      country: "USA"
+      host: "Prof. Jonathan Katz"
+  

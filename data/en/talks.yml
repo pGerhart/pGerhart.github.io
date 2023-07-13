@@ -5,7 +5,7 @@ talks:
       year: 2023
       stage: "IEEE S&P"
       location: "San Francisco, CA"
-    - title: "Practical Schnorr Threshold Signatures without the Algebraic Group Model"
-      year: 2023
-      stage: "CIBE"
-      location: "Bertinoro, Italy"
+    #- title: "Practical Schnorr Threshold Signatures without the Algebraic Group Model"
+    #  year: 2023
+    #  stage: "CIBE"
+    #  location: "Bertinoro, Italy"

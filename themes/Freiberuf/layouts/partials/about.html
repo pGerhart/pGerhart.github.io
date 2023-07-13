@@ -2,7 +2,7 @@
 {{ with $data.about.about }}
 <div class="col-md-4 pt-4 ">
     <div class="card">
-        <img src="{{ .image | relURL}}" class="card-img-top img-fluid" alt="{{ site.Params.title }}">
+        {{- partial "responsive_image.html" (dict "image" .image "title" site.Params.title "class" "card-img-top img-fluid" "widths" (dict "md" 33)) -}}
         {{ partial "contact.html" .}}
     </div>
 </div>

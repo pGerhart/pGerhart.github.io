@@ -17,7 +17,7 @@
                             {{ end }}
                         </s2>
                         <s3>{{ .authors }}</s3>
-                        <s1>{{ .published }}</s1>
+                        <s1>{{ .published }} {{.year}}</s1>
                         {{ if .url }}
                         <a href="{{ .url }}" class="text-secondary">{{ .url }}</a>
                         {{ end }}
