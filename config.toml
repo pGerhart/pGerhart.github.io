@@ -4,6 +4,7 @@ title = "Paul Gerhart"
 theme = "Freiberuf"
 # disable language
 disableLanguages = []
+timeout = "10m"
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
