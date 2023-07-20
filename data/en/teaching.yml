@@ -11,11 +11,11 @@ lectures:
 students:
   title : Supervised Students
   items:
-    - name: Julian Kotzur
-      date: 2023
-      degree: Master Thesis
-      topic: "Signature Security Revisited: One Dice to Rule Them All"
     - name: Daniel Lang 
       date: 2023
       degree: Bachelor Thesis
       topic: "Strong Unlinkability for Adaptor Signatures"
+    - name: Julian Kotzur
+      date: 2023
+      degree: Master Thesis
+      topic: "Signature Security Revisited: One Dice to Rule Them All"
