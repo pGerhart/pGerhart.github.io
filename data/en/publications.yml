@@ -1,14 +1,6 @@
 publications : 
   title: Publications
   items : 
-    
-      - title : Adaptor Signatures in the Standard Model 
-        year : 2023
-        authors : Paul Gerhart, Sri A. K. Thyagarajan, Dominique Schröder, Pratik Soni
-        published : In Submission to ACM CCS
-        has_info : true 
-        abstract : "Adaptor signatures are a novel cryptographic primitive with numerous applications for conditional payments in blockchain systems, like, payment channels (CCS'20, CCS'21), private coin mixing (CCS'22), and oracle-based payments (NDSS'23). On a high level, this primitive allows the signer to compute pre-signatures on messages for statements of NP relations. Pre-signatures are publicly verifiable that simultaneously hide and commit to a signature of an underlying signature scheme on that message. Anybody possessing a corresponding witness for the statement can adapt the pre-signature to obtain the ``regular'' signature.  Despite their popularity, all known constructions of adaptor signatures are (1) in the random oracle model and are derived from identification schemes via the Fiat-Shamir transform or (2) require modifications to the underlying signature verification algorithm, thus sidestepping a major challenge in the design of adaptor signatures.  This work closes the gap by presenting the first adaptor signature schemes in the standard model based on signature schemes like Camenisch-Lysyanskaya (CL) and Boneh-Boyen-Shacham (BBS+). To achieve this goal, firstly, we develop a new abstraction of a special class of homomorphic signatures called \emph{dichotomic signatures} and show that we can construct adaptor signature schemes generically for such signatures. We show that dichotomic signatures can be instantiated from many well-known signature schemes like identification-based schemes (that use Fiat-Shamir heuristic), CL and BBS+. In the next step, to prove the security of our adaptor signature scheme, we develop a new non-black-box proof technique called transparent reductions that allows us to make a non-black-box use of the code of the reduction in subsequent proofs.  We identify a novel application specific to our CL and BBS+ signature-based schemes in the setting of Anonymous Credentials and blockchain payments. Specifically, using our adaptor constructions, users can atomically pay in a blockchain system to the issuing authority in exchange for the authority's attestations on the users' credentials for access control-based applications.  Our adaptor signature construction, aided by our novel proof technique, adds only a minimal overhead compared to the underlying signature algorithms and is, therefore, highly efficient in practice. "
-
       - title : Practical Schnorr Threshold Signatures without the Algebraic Group Model
         year : 2023
         authors : Hien Chu, Paul Gerhart, Tim Ruffing, Dominique Schröder 
