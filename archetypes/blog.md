@@ -5,5 +5,5 @@ draft: false
 resources:
     images:
     - name: "Image"
-      src: "/images/aktuelles/"
+      src: "/images/blog/"
 ---
