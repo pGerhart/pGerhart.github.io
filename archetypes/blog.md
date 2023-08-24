@@ -1,6 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+title: "{{ replace .Name "-" " " | title }}"
+draft: false
+resources:
+    images:
+    - name: "Image"
+      src: "/images/aktuelles/"
 ---
-

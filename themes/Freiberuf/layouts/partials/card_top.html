@@ -1,0 +1,43 @@
+<!-- creates a card top with a top-carousel or a top-image 
+	images: the slice of the images
+        - title
+          src
+    title: title of the carousel
+    widths: computation of the width plus percentage: e.g. md 50 stands for col-md-6
+-->
+{{- $ctr := 0 }}
+
+{{ if .images}}
+{{ if gt (len .images) 1}}
+{{- $id := printf "index_carousel%d" (crypto.FNV32a .title)}}
+<div id="{{$id}}" class="card-img-top carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        {{ range .images }}
+        {{- $src := resources.Get .src -}}
+        {{- if and $src (eq $src.MediaType.MainType "image") -}}
+        <button type="button" data-bs-target="#{{- $id}}" data-bs-slide-to="{{$ctr}}" {{ if eq $ctr 0 }}
+            class="active" aria-current="true" {{ end }} aria-label="{{.title}}"></button>
+        {{- $ctr = add $ctr 1 -}}
+        {{- end -}}
+        {{- end -}}
+    </div>
+    <div class="carousel-inner">
+        {{ $ctr = 0 }}
+        {{ range .images }}
+        {{- $src := resources.Get .src -}}
+        {{- if and $src (eq $src.MediaType.MainType "image") -}}
+        <div class="carousel-item {{if eq $ctr 0 }} active {{ $ctr = 1}}{{end}}">
+            {{- partial "responsive_image.html"  (dict "image" .src "title" .title "class" "rounded-top img-fluid bg-image" "widths" .widths) -}}
+            {{ $ctr = add $ctr 1 }}
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ if eq $ctr 0 }}
+{{- range first 1 .images -}}
+    {{- partial "responsive_image.html"  (dict "image" .src "title" .title "class" "rounded-top img-fluid bg-image" "widths" .widths) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}

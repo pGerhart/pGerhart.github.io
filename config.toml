@@ -28,8 +28,8 @@ url = "/#teaching"
 weight = 5
 
 [[Languages.en.menu.main]]
-name = "Community Service"
-url = "/#commservice"
+name = "Blog"
+url = "/blog"
 weight = 6
 
 [[Languages.en.menu.main]]

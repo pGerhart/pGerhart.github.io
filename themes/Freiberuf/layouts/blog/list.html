@@ -1,0 +1,12 @@
+{{ define "content" }}
+
+<div class="container pt-3 pb-3">
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <div class="row justify-content-center pt-3">
+        <div class="col-md-8 col-sm-10 ">
+            {{ partial "contentCard.html" (dict "Context" . "Title" .Params.Title "Content" .Content "Images"
+            .Params.Resources.Images "widths" (dict "md" 50 "sm" 85 )) }} </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
