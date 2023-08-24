@@ -3,14 +3,14 @@
 <div class="col-lg-12">
     <div class="card">
         <div class="card-body">
-            <s5><i class="ti-files"></i> Recent Publications </s5>
+            <s5><i class="bi bi-file-earmark"></i> Recent Publications </s5>
             <div class="container">
                 {{ range first 3 .items }}
                 <div class="row">
                     <div class="col-lg-12 pt-4">
                         <s2>
                             {{ if .has_info}}
-                            <a data-bs-toggle="modal" data-bs-target="#{{ printf " %s%s" .title .year | urlize}}"
+                            <a data-bs-toggle="modal" data-bs-target="#{{ printf "paper%s%s" .title .year | urlize}}"
                                 class="text-body"> {{.title}}</a>
                             {{ else }}
                             {{ .title }}
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 {{ if .has_info }}
-                <div class="modal fade" id="{{ printf " %s%s" .title .year | urlize}}">
+                <div class="modal fade" id="{{ printf "paper%s%s" .title .year | urlize}}">
                     <div class="modal-dialog modal-xl modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">

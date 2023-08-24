@@ -1,11 +1,13 @@
 talks:
   title: Talks
   items :
+    - title: "Practical Schnorr Threshold Signatures without the Algebraic Group Model"
+      abstract: "Practical Schnorr Threshold Signatures without the Algebraic Group Model is a work which was published at CRYPTO 2023."
+      year: 2023
+      stage: "CRYPTO"
+      location: "Santa Barbara, CA"
+      slides: "OLAF_Talk_Crypto.pdf"
     - title: "How to Avoid Unfair Exchange: Adaptor Security Revisited"
       year: 2023
       stage: "IEEE S&P"
       location: "San Francisco, CA"
-    #- title: "Practical Schnorr Threshold Signatures without the Algebraic Group Model"
-    #  year: 2023
-    #  stage: "CIBE"
-    #  location: "Bertinoro, Italy"
