@@ -16,7 +16,9 @@
     <meta name="msapplication-TileColor" content="#7d7d7d">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
+    
+    {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
+    
     <title>{{ if .Title }} {{ .Title }} {{ else }} {{ site.Params.title }} {{end}}</title>
     {{ if .Title }}
     <meta name="description" content="{{ .Title }}">
