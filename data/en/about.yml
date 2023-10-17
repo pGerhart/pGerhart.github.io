@@ -2,9 +2,7 @@
 about:
   image : images/GRK_Shooting.jpeg
   title :  About Me
-  content : "My name is Paul Gerhart and I am a researcher and assessor. 
-             My main field is cryptography where I study fair exchange, 
-             optimized blockchain protocols and differential privacy."
+  content : "I am Paul Gerhart, a dedicated researcher and assessor, specializing in the field of cryptography. My primary areas of focus encompass the study of fair optimized blockchain protocols, password-hardening, and differential privacy."
   cryptography:
     title : Cryptography 
     icon : ti-lock
