@@ -1,14 +1,12 @@
 {{ define "content" }}
 
-<div class="container">
-    <div id="about">
-        <div class="row">
-            {{ partial "about.html" .}}
-        </div>
-        <div class="row">
-            {{ partial "education.html" . }}
-            {{ partial "work.html" . }}
-        </div>
+<div class="container pt-4">
+    <div class="row" id="about">
+        {{ partial "about.html" .}}
+    </div>
+    <div class="row" id="education">
+        {{ partial "education.html" . }}
+        {{ partial "work.html" . }}
     </div>
     <div class="row pt-4" id="publications">
         {{ partial "publication_partial.html" . }}

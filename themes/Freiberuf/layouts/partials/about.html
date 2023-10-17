@@ -1,34 +1,55 @@
 {{ $data := index site.Data site.Language.Lang }}
 {{ with $data.about.about }}
-<div class="col-md-4 pt-4 ">
-    <div class="card">
-        {{- partial "responsive_image.html" (dict "image" .image "title" site.Params.title "class" "card-img-top img-fluid" "widths" (dict "md" 33)) -}}
-        {{ partial "contact.html" .}}
-    </div>
-</div>
-<div class="col-md-8 pt-4 d-flex align-items-stretch">
-    <div class="card">
-        <div class="card-body">
-            <s5 class="card-title"><i class="bi bi-person-circle"></i> {{ .title | markdownify }}</s5>
-            <div class="container pt-4">
-                <p class="blocksatz">{{ .content | markdownify }}</p>
-                <div class="row">
-                    {{ range .feature_item }}
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4> <!--<i class="{{ .icon }}"></i> -->
-                                    {{ .title | markdownify }}</h4>
-                                <div class="container">
-                                    <p class="blocksatz">{{ .content | markdownify }}</p>
+<div class="col">
+
+<div class="card">
+    <div class="row">
+        <div class="col-md-5 col-lg-4 pt-3 ps-4 pe-4 ">
+            {{- partial "responsive_image.html" (dict "image" .image "title" site.Params.title "class" "card-img-top img-fluid" "widths" (dict "lg" 33 "md" 42)) -}}
+            {{ partial "contact.html" .}}
+        </div>
+        <div class="col-md-7 col-lg-8 col-xxl-6 pt-3 d-flex align-items-stretch">
+            <div class="card-body">
+                <s5 class="card-title"><i class="bi bi-person-circle"></i> {{ .title | markdownify }}</s5>
+                <div class="container">
+                    <p class="blocksatz">{{ .content | markdownify }}</p>
+                    <div class="row d-none d-md-block">
+                        {{ with .cryptography }}
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4> <!--<i class="{{ .icon }}"></i> -->
+                                        {{ .title | markdownify }}</h4>
+                                    <div class="d-none d-lg-block container">
+                                        <p class="blocksatz">{{ .content | markdownify }}</p>
+                                    </div>
+                                    <div class="d-md-block d-lg-none container">
+                                        <p class="blocksatz">{{ .contentshort | markdownify }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
+                    <div class="row d-none d-xl-block">
+                        {{ with .privacy }}
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4> <!--<i class="{{ .icon }}"></i> -->
+                                        {{ .title | markdownify }}</h4>
+                                    <div class="container">
+                                        <p class="blocksatz">{{ .content | markdownify }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 {{ end }}

@@ -5,22 +5,15 @@ about:
   content : "My name is Paul Gerhart and I am a researcher and assessor. 
              My main field is cryptography where I study fair exchange, 
              optimized blockchain protocols and differential privacy."
-  feature_item : 
-    - title : Cryptography 
-      icon : ti-lock
-      content : "Cryptography is my passion as it combines the two fields I like most: mathematics and computer science. 
-                 While mathematics has a long scientific background, cryptography was more of an art most of the time. 
-                 This changed when Whitfield Diffie and Martin E. Hellman turned this ancient art into science in 1976. 
-                 Since then, we assume a cryptographic scheme is secure if the ability to break it can be used to solve a problem that we assume to be hard. 
-                 While the power and elegance of modern cryptographic tools seem like magic because they are too strong to be possibly true, 
-                 it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. 
-                 Some keywords here are zero-knowledge proofs and commitment schemes. 
-                 It is even more fascinating when your desired career was to be a magician as a child like it was for me.
-                "
-      
-    - title : Privacy
-      icon : ti-id-badge 
-      content : "The emerging complexity of modern world applications often neglects the users' privacy. 
+  cryptography:
+    title : Cryptography 
+    icon : ti-lock
+    content : "Cryptography is my passion because it seamlessly bridges my two favorite domains: mathematics and computer science.  Marrying mathematical theory's elegance with real-world practicality makes it a fascinating realm where abstract concepts become powerful tools.  While modern cryptographic tools' power and almost enchanting abilities seem like magic because they are too strong to be possibly true, it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. It is even more fascinating when your desired career was to be a magician as a child, like it was for me."
+    contentshort : "Cryptography is my passion because it bridges my two favorite domains: mathematics and computer science. While the power and elegance of modern cryptographic tools seem like magic because they are too strong to be possibly true, for me, it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. "
+  privacy:  
+    title : Privacy
+    icon : ti-id-badge 
+    content : "The emerging complexity of modern world applications often neglects the users' privacy. 
                  My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full functionality 
                  of the application can be achieved while securing every single user's privacy.
                  An impressive cryptographic construction that achieves this goal is Differential Privacy.
