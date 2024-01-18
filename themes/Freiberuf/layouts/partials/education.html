@@ -8,7 +8,9 @@
                 {{ range .items }}
                 <div class="row">
                     <div class="col-md-12 pt-4">
-                        <s2>{{ .degree }} in {{ .subject }} </s2>
+                        <s2>{{ .degree }} in {{ .subject }}  {{ with .supervisor }}
+                             under {{ . }}
+                            {{ end }}</s2>
                         <s3>{{ .institution }}</s3>
                         {{ if .topics }}
                         <s1>{{ .topics }} </s1>
