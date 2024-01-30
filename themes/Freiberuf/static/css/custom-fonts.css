@@ -8,10 +8,39 @@ h1, h2, h3, h4, h5, h6,
 html, body, .tooltip, .popover {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+  font-optical-sizing: auto;
 }
 code, kbd, pre, samp, .text-monospace {
   font-family: "Noto Mono", monospace
 }
 button, input, optgroup, select, textarea {
   font-family: inherit
+}
+
+s1 { /* former p */
+  display: block;
+  font-weight: 200;
+}
+
+s2 { /*former h5*/
+  display: block;
+  font-weight: 400;
+  font-size: 1.1;
+  line-height: 1.4;
+}
+
+s3 { /*former h6*/
+  display: block;
+  font-weight: 300;
+}
+
+s4 { /* former h7 */
+  display: block;
+  font-weight: 200;
+}
+
+s5 { /* former h3 */
+  display: block;
+  font-weight: 400;
+  font-size: 1.3rem;
 }
