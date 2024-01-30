@@ -2,19 +2,19 @@
 about:
   image : images/GRK_Shooting.jpeg
   title :  About Me
-  content : "I am Paul Gerhart, a dedicated researcher and assessor, specializing in the field of cryptography. My primary areas of focus encompass the study of fair optimized blockchain protocols, password-hardening, and differential privacy."
+  content : "I am Paul Gerhart, a dedicated researcher, specializing in the field of cryptography. My primary areas of focus encompass the study of fair protocols, password-hardening, and differential privacy."
   cryptography:
     title : Cryptography 
     icon : ti-lock
-    content : "Cryptography is my passion because it seamlessly bridges my two favorite domains: mathematics and computer science.  Marrying mathematical theory's elegance with real-world practicality makes it a fascinating realm where abstract concepts become powerful tools.  While modern cryptographic tools' power and almost enchanting abilities seem like magic because they are too strong to be possibly true, it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. It is even more fascinating when your desired career was to be a magician as a child, like it was for me."
-    contentshort : "Cryptography is my passion because it bridges my two favorite domains: mathematics and computer science. While the power and elegance of modern cryptographic tools seem like magic because they are too strong to be possibly true, for me, it is fascinating how we can realize them using just the beauty of assumptions and logical conclusions. "
+    content : "Cryptography is my passion because it seamlessly bridges two of my favorite domains: mathematics and computer science.  Marrying mathematical theory's elegance with real-world practicality makes it a fascinating realm where abstract concepts become powerful tools.  While modern cryptographic tools' power and almost enchanting abilities seem like magic because they are too strong to be possibly true, it is fascinating how we can leverage them just through the beauty of assumptions and logical conclusions. It is even more fascinating when your childhood dream career was to be a magician, as it was for me."
+    contentshort : "Cryptography is my passion because it bridges two of my two favorite domains: mathematics and computer science. While the power and elegance of modern cryptographic tools seem like magic because they are too strong to be possibly true, for me, it is fascinating how we can leverage them using just the beauty of assumptions and logical conclusions. "
   privacy:  
     title : Privacy
     icon : ti-id-badge 
-    content : "The emerging complexity of modern world applications often neglects the users' privacy. 
-                 My goal is to enable research on potentially sensitive data using cryptographic schemes such that the full functionality 
-                 of the application can be achieved while securing every single user's privacy.
-                 An impressive cryptographic construction that achieves this goal is Differential Privacy.
+    content : "The emerging complexity of modern world applications often neglects users' privacy. 
+                 My goal is to enable research on potentially sensitive data using cryptographic schemes such that an application's full functionality 
+                 can be achieved while guaranteeing each and every user's privacy.
+                 An impressive cryptographic construction that achieves this goal is differential privacy.
                 "
 
       

@@ -2,11 +2,11 @@ work:
   title : Work
   items :
     - name : Assessor
-      date : 12/2022 - now
+      date : 12/2022 - present
       topics : Cryptography, Privacy, IT-Forensics 
 
-    - name : Scientific Employee
-      date : 08/2022 - now
+    - name : University Research Assistant 
+      date : 08/2022 - present
       topics : Applied Cryptography
       employer : Friedrich-Alexander University Erlangen-Nürnberg
 

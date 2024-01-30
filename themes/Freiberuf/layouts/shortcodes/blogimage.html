@@ -1,0 +1,12 @@
+<figure class="figure mx-auto d-block" {{ with .Get "width" }}style="max-width: {{.}};"{{ end }}>
+
+      {{/* 
+        {{- partial "responsive_image.html"  (dict "image" (.Get "src") "title" (.Get "title") "class" "figure-img rounded img_fluid img-thumbnail") "widths" (dict "sm" 100)}} 
+      */}}
+      <img src="{{.Get "src"}}" class="figure-img rounded img_fluid img-thumbnail"></img>
+        
+      {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
+
+      <figcaption class="figure-caption">{{ .Get "caption"}}</figcaption>
+    {{ end }}
+  </figure>

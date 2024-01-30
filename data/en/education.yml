@@ -1,9 +1,10 @@
 education:
   title: Education
   items:
-  - date : 08/2022 - now
+  - date : 08/2022 - present
     institution : Friedrich-Alexander University Erlangen-Nürnberg 
-    degree : Dr-Ing.
+    degree : Doctoral Student  
+    topics : Fair protocols, Password-hardening, Privacy
     subject : Cryptography
     supervisor : Dominique Schröder
   

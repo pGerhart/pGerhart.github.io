@@ -5,6 +5,7 @@ theme = "Freiberuf"
 # disable language
 disableLanguages = []
 timeout = "10m"
+disableKinds = ['rss']
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
