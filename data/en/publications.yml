@@ -2,7 +2,7 @@ publications :
   title: Publications
   items : 
       - title : Foundations of Adaptor Signatures 
-        year : 2022
+        year : 2024
         authors : Paul Gerhart, Dominique Schröder, Pratik Soni, Sri AravindaKrishnan Thyagarajan
         published : Eurocrypt 
         has_info : true 
