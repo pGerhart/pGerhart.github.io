@@ -11,10 +11,7 @@ about:
   privacy:  
     title : Privacy
     icon : ti-id-badge 
-    content : "The emerging complexity of modern world applications often neglects users' privacy. 
-                 My goal is to enable research on potentially sensitive data using cryptographic schemes such that an application's full functionality 
-                 can be achieved while guaranteeing each and every user's privacy.
-                 An impressive cryptographic construction that achieves this goal is differential privacy.
+    content : "Modern applications, with their increasing complexity, frequently overlook the importance of user privacy. My aim is to facilitate research on sensitive data through the use of cryptographic methods, ensuring that applications can operate fully without compromising the privacy of any user. 
                 "
 
       
