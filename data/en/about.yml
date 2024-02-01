@@ -2,7 +2,7 @@
 about:
   image : images/GRK_Shooting.jpeg
   title :  About Me
-  content : "I am Paul Gerhart, a dedicated researcher, specializing in the field of cryptography. My primary areas of focus encompass the study of fair protocols, password-hardening, and differential privacy."
+  content : "I am Paul Gerhart, a dedicated researcher, specializing in the field of cryptography. My primary areas of focus encompass the study of fair protocols, password-hardening, and privacy."
   cryptography:
     title : Cryptography 
     icon : ti-lock
