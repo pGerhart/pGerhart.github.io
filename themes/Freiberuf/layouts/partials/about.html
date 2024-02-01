@@ -11,7 +11,6 @@
         <div class="col-md-7 col-lg-8 col-xxl-6 pt-3 d-flex align-items-stretch">
             <div class="card-body">
                 <s5 class="card-title"><i class="bi bi-person-circle"></i> {{ .title | markdownify }}</s5>
-                <div class="container">
                     <p class="blocksatz container">{{ .content | markdownify }}</p>
                     <div class="row d-none d-md-block">
                         {{ with .cryptography }}
@@ -19,6 +18,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <s5> <!--<i class="{{ .icon }}"></i> -->
+                                        <i class="bi bi-shield-shaded"></i>
                                         {{ .title | markdownify }}</s5>
                                     <div class="d-none d-lg-block container">
                                         <p class="blocksatz">{{ .content | markdownify }}</p>
@@ -37,6 +37,8 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <s5> <!--<i class="{{ .icon }}"></i> -->
+                                        
+                                        <i class="bi bi-fingerprint"></i>
                                         {{ .title | markdownify }}</s5>
                                     <div class="container">
                                         <p class="blocksatz">{{ .content | markdownify }}</p>
@@ -46,7 +48,6 @@
                         </div>
                         {{ end }}
                     </div>
-                </div>
             </div>
         </div>
     </div>
