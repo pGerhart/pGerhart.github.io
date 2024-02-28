@@ -22,9 +22,9 @@
     
     {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
     
-    <title>{{ site.Params.title }} {{ if .Title }} | {{ .Title }} {{end}}</title>
+    <title>{{ site.Params.title }} {{ if .Title }} · {{ .Title }} {{end}}</title>
     {{ if .Title }}
     <meta name="description" content="{{ .Title }}">
-    <meta name="keywords" content="Paul Gerhart, Paul Gerhardt, Paul Gerhard, cryptography, privacy, crypto">  
     {{ end }}
+    <meta name="keywords" content="Paul Gerhart, Paul Gerhardt, Paul Gerhard, cryptography, privacy, crypto">  
 </head>
