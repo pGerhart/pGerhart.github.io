@@ -2,18 +2,27 @@ teaching:
   title: Teaching
 
 lectures:
-  title : Lectures
   items :
     - subject : Introduction to Modern Cryptography
+      kind: Lecture
       semester : Winter term 23/24
       position : Teaching assistant
     - subject : Introduction to Modern Cryptography
+      kind: Lecture
       semester : Winter term 22/23
       position : Teaching assistant
 
 students:
   title : Supervised Students
   items:
+    - name: Katharina Schambach
+      date: 2024
+      degree: Bachelor Thesis
+      topic: "Atomic Swaps from Minimal Assumptions"
+    - name: Fabian Jost 
+      date: 2024
+      degree: Master Thesis
+      topic: "Foundations of Blind Conditional Signatures"
     - name: Daniel Lang 
       date: 2023
       degree: Bachelor Thesis
