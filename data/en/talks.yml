@@ -1,6 +1,12 @@
 talks:
   title: Talks
   items :
+    - title: "Foundations of Adaptor Signatures"
+      abstract: "Foundations of Adaptor Signatures published at EUROCRYPT 2024."
+      year: "2024" 
+      stage: "Seminar Talk"
+      location: "Qiang Tang, University of Sydney"
+      slides: "Found_Adaptors_Slides.pdf"
     - title: "Practical Schnorr Threshold Signatures without the Algebraic Group Model"
       abstract: "Practical Schnorr Threshold Signatures without the Algebraic Group Model is a work which was published at CRYPTO 2023."
       year: 2023
