@@ -27,7 +27,7 @@ students:
       date: 2023
       degree: Bachelor Thesis
       topic: "Strong Unlinkability for Adaptor Signatures"
-    - name: Julian Kotzur
+    - name: Julian Thomas
       date: 2023
       degree: Master Thesis
       topic: "Signature Security Revisited: One Dice to Rule Them All"
