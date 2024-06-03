@@ -5,7 +5,7 @@
         <div class="card-body">
             <s5><i class="bi bi-briefcase"></i> {{ .title | markdownify }}</s5>
             <div class="container">
-                {{ range .items }}
+                {{ range first 3 .items }}
                 <div class="row">
                     <div class="col-md-12 pt-4">
                     <s2>{{ .name }} </s2>
