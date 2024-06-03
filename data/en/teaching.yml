@@ -27,6 +27,10 @@ students:
       date: 2023
       degree: Bachelor Thesis
       topic: "Strong Unlinkability for Adaptor Signatures"
+    - name: Ruben Baecker 
+      date: 2023
+      degree: Master Thesis
+      topic: "Phoenix Rise Once Again: How to Defeat the (PW-)Hero"
     - name: Julian Thomas
       date: 2023
       degree: Master Thesis
