@@ -7,7 +7,7 @@ publications :
         published : PoPETS 
         has_info : true 
         abstract : "The realm of digital health is experiencing a global surge, with mobile applications extending their reach into various facets of daily life. From tracking daily eating habits and vital functions to monitoring sleep patterns and even the menstrual cycle, these apps have become ubiquitous in their pursuit of comprehensive health insights.  Many of these apps collect sensitive data and promise users to protect their privacy - often through pseudonymization.  We analyze the real anonymity that users can expect by this approach and report on our findings. More concretely:  \n - We introduce the notion of *conditional* anonymity sets derived from statistical properties of the population. \n - We measure anonymity sets for two real-world applications and present overarching findings from 39 countries. \n - We develop a graphical tool for people to explore their own anonymity set.  One of our case studies is a popular app for tracking the menstruation cycle. \n\n Our findings for this app show that, despite their promise to protect privacy,   the collected data can be used to identify users up to groups of 5 people in 97% of all the US counties, allowing the de-anonymization of the individuals.  Given that the US Supreme Court recently overturned abortion rights, the possibility of determining individuals is a calamity."
-        #pdf: "https://eprint.iacr.org/2023/899.pdf"
+        pdf: "https://eprint.iacr.org/2024/998.pdf"
       - title : Foundations of Adaptor Signatures
         year : 2024
         authors : Paul Gerhart, Dominique Schröder, Pratik Soni, Sri A.K. Thyagarajan
