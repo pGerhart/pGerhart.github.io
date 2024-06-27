@@ -6,6 +6,7 @@ talks:
       year: 2024
       stage: "CIBE"
       location: "Bertinoro, IT"
+      slides: "main_Bertinoro_Adaptor_Foundations.pdf"
     - title: "Foundations of Adaptor Signatures"
       abstract: "Foundations of Adaptor Signatures is a work that was published at EUROCRYPT 2024."
       year: 2024
