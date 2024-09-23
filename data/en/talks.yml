@@ -1,6 +1,11 @@
 talks:
   title: Talks
   items :
+    - title: "Foundations of Adaptor Signatures"
+      abstract: "Foundations of Adaptor Signatures is a work that was published at EUROCRYPT 2024."
+      year: 2024
+      stage: "Brown Crypto Day"
+      location: "Providence, RI"
     - title: "Measuring Conditional Anonymity - A Global Study"
       abstract: "The conference talk for Measuring Conditional Anonymity - A Global Study, published at PETS'24"
       year: 2024
