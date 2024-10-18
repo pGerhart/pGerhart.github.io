@@ -1,6 +1,6 @@
 ############################# feature ###################################
 about:
-  image : images/GRK_Shooting.jpeg
+  image : images/tu_portrait.jpg
   title :  About Me
   content : "I am Paul Gerhart, a dedicated researcher, specializing in the field of cryptography. My primary areas of focus encompass the study of fair protocols, password-hardening, and privacy."
   cryptography:
