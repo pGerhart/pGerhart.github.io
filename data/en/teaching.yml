@@ -2,7 +2,12 @@ teaching:
   title: Teaching
 
 lectures:
+  title: Teaching Activities
   items :
+    - subject : Privacy Enhancing Technologies (B.Sc.) 
+      kind: Lecture
+      semester : Winter term 24/25
+      position : Teaching assistant
     - subject : Introduction to Modern Cryptography
       kind: Lecture
       semester : Winter term 23/24

@@ -1,0 +1,91 @@
+{{ define "content" }}
+
+<div class="container pt-2">
+    <div class="row">
+        <div class="col-sm-4 col-lg-3 pt-3">
+            {{- partial "responsive_image.html" (dict
+            "image" site.Params.portrait
+            "title" site.Params.title
+            "class" "card-img-top rounded img-fluid"
+            "widths" (dict "xxl" 25 "lg" 30 "md" 41))
+            -}}
+        </div>
+        <div class="col-sm-1">
+        </div>
+        <div class="col pt-3">
+            {{ $data := index site.Data site.Language.Lang }}
+            {{ with $data.contact.contact }}
+            <h1>{{.first_name}} {{.last_name}} </h1>
+            <p>
+                PhD student <br>
+                Privacy Enhancing Technologies<br>
+                TU Wien <br>
+                Office: FB 0307 <br>
+                Email: {{.email_anon}} <br>
+                <a href="{{.scholar}}" class="" title="Google Scholar">Google Scholar</a>
+                <a href="{{.dblp}}" class="" title="DBLP">DBLP</a>
+                <a href="{{.linkedin}}" class="" title="LinkedIn">LinkedIn</a>
+            </p>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="row pt-4">
+
+        <div class="col">
+            <p>
+                I am a PhD student at the <a href="https://www.pets.wien" target="_blank">Privacy Enhancing
+                    Technologies</a> research unit at <a href="https://www.tuwien.at" target="_blank">TU Wien</a> in
+                Austria, under the supervision of <a href="https://www.dominique-schroeder.de" target="_blank">Dominique
+                    Schröder</a>.
+            </p>
+
+            <h2 class="pt-4">Research</h2>
+            <p>
+                I am captivated by problems that are difficult to solve and appear unsolvable at first glance.
+                Achieving fairness in two-party protocols or preserving an individual's privacy while still enabling
+                statistical and metric computations over an entire dataset are examples of such challenges. Though many
+                of these problems may seem paradoxical, I am driven to resolve them using the power and elegance of
+                cryptography.
+
+                Working on such problems, my work bridges both theoretical and practical aspects of cryptography.
+                My research interests include advanced digital signatures such as adaptor signatures, secure and fair
+                multiparty computation (including distributed key generation and threshold signatures), differential
+                privacy, and password-based cryptography.
+            </p>
+
+
+            <h2 class="pt-4">Education</h2>
+            <p>
+                I am pursuing my PhD under the supervision of <a href="https://www.dominique-schroeder.de"
+                    target="_blank">Dominique Schröder</a> since 2022. Initially, I began
+                my doctoral studies at <a href="https://www.fau.eu" target="_blank">Friedrich-Alexander-University
+                    Erlangen-Nürnberg</a>, Germany, and subsequently followed Dominique to <a
+                    href="https://www.tuwien.at" target="_blank">TU Wien</a> in 2024.
+
+                Prior to my PhD, I earned a Master of Science (M.Sc.) in Computer Science from <a
+                    href="https://www.fau.eu" target="_blank">Friedrich-Alexander-University Erlangen-Nürnberg</a>
+                between 2020 and 2022. Earlier, I completed my Bachelor of Science (B.Sc.) in Mathematics at the <a
+                    href="https://www.uni-bonn.de" target="_blank">University of Bonn</a>, Germany, from 2017 to 2020.
+            </p>
+
+            <h2 class="pt-4">Recent <a href="/publications">Publications</a></h2>
+            {{ with $data.publications.publications }}
+            {{ range first 4 .items }}
+            <p class="pb-2">
+                {{ if .pdf }}
+                <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
+                {{ else }}
+                {{ .title }}
+                {{ end }}<br>
+                {{ .authors }} <br>
+                <b>{{ .published }} {{.year }}</b>
+
+            </p>
+
+            {{ end }}
+            {{ end }}
+
+        </div>
+
+        {{ end }}

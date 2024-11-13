@@ -1,0 +1,42 @@
+{{ define "content" }}
+{{ $data := index site.Data site.Language.Lang }}
+{{ $currentYear := "2016" }}
+{{ $first := true }}
+
+<div class="container pt-2 pt-3">
+    <div class="row">
+
+
+        {{ with $data.publications.publications }}
+        <h2 class="pt-4">{{.title}}</h2>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">
+                        {{ if ne .year $currentYear }}
+                        {{ $currentYear = .year }}
+                        {{ .year }}
+                        {{ end }}
+                    </td>
+                    <td style="padding-left: 15px;">
+                        {{ if .pdf }}
+                        <a href="{{ .pdf }}" class="" target="_blank">{{ .title }} </a>
+                        {{ else }}
+                        {{ .title }}
+                        {{ end }}<br>
+                        {{ .authors }} <br>
+                        <b>{{ .published }} {{if .pdf }} {{.year}}{{end}} </b>
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+
+    </div>
+</div>
+
+{{ end }}

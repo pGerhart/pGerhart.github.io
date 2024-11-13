@@ -1,46 +1,39 @@
 ################################# Default configuration ###################
 baseURL = "https://www.paul-gerhart.de"
 title = "Paul Gerhart"
-theme = "Freiberuf"
+theme = "PGTheme"
 # disable language
 disableLanguages = []
 timeout = "10m"
 disableKinds = ['rss']
 
 ################### English Navigation ########################
+
 [[Languages.en.menu.main]]
-name = "About"
-url = "/#about"
+name = "CV"
+url = "/cv"
 weight = 1
 
 [[Languages.en.menu.main]]
 name = "Publications"
 url = "/publications"
-weight = 3
+weight = 2
 
 [[Languages.en.menu.main]]
 name = "Talks"
 url = "/talks"
-weight = 4
+weight = 3
 
-[[Languages.en.menu.main]]
-name = "Teaching"
-url = "/#teaching"
-weight = 5
-
-[[Languages.en.menu.main]]
-name = "Blog"
-url = "/blog"
-weight = 6
 
 [[Languages.en.menu.main]]
 name = "Imprint"
 url = "imprint"
-weight = 11 
+weight = 11
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo/PGLogoHighContrast.svg"
+logo = "images/PGLogoHighContrast.svg"
+portrait = "images/portrait.jpg"
 author = "Paul Gerhart"
 title = "Paul Gerhart"
 ustid = ""
@@ -52,5 +45,4 @@ languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
-copyright = "Copyright &copy; 2022 Paul Gerhart"
-
+copyright = "Copyright &copy; 2024 Paul Gerhart"

@@ -1,0 +1,33 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ $currentYear := "2016" }}
+{{ with $data.talks.talks }}
+<h2 class="pt-4">{{.title}}</h2>
+
+<!-- Wrapper div for horizontal scrolling -->
+<div style="overflow-x: auto;">
+    <table style="border-collapse: separate; border-spacing: 0 10px;">
+        {{ range .items }}
+        <tr>
+            <td style="vertical-align: top; padding-right:15px;">
+                {{ if ne .year $currentYear }}
+                {{ $currentYear = .year }}
+                {{ .year }}
+                {{ end }}
+
+
+            </td>
+            <td style="padding-left: 15px;">
+                {{ if .slides }}
+                <a href="/talks/{{ .slides }}" class="" target="_blank">{{ .title }} </a>
+                {{ else }}
+                {{ .title }}
+                {{ end }}<br>
+                <b>{{.stage}} {{.year}}</b><br>
+                {{.location}}
+            </td>
+        </tr>
+        {{ end }}
+    </table>
+</div>
+{{ end }}

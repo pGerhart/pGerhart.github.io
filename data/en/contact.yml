@@ -4,16 +4,14 @@ contact:
   # Contact details
   last_name : Gerhart
   first_name : Paul 
-  address_1 : "Artilleriestr. 14"
-  address_2 : "91052 Erlangen"
-  phone : "+43 676 5814491" 
-  phone_description : "Mobile"
+  address_1 : "Knöllgasse 19"
+  address_2 : "1100 'Wien"
   email : "mail@paul-gerhart.de"
   email_anon : "mail [at] paul-gerhart.de"
   homepage : "https://paul-gerhart.de"
   ust_id : "DE 358114582"
   ust_id_description : "Tax ID"
-  github: "@pGerhart"
   linkedin: "https://www.linkedin.com/in/paul-gerhart"
   scholar: "https://scholar.google.com/citations?hl=de&user=Zbv2SacAAAAJ"
+  dblp: "https://dblp.org/pid/350/5886.html"
 

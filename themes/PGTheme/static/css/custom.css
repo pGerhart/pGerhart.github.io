@@ -1,0 +1,34 @@
+.more-height {
+  /* For the contact info*/
+  line-height: 2;
+}
+
+p {
+  font-weight: 200;
+  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h2 {
+  color: #00796B;
+  font-weight: 200;
+  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
+}
+
+body {
+  font-weight: 200;
+  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
+}
+
+a {
+  color: #00796B;
+  /* Teal color */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #004D40;
+}

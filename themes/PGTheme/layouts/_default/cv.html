@@ -1,0 +1,114 @@
+{{ define "content" }}
+{{ $data := index site.Data site.Language.Lang }}
+<div class="container pt-2 pt-3">
+    <div class="row">
+
+        {{ with $data.education.education }}
+        <h2 class="pt-4">{{.title}}</h2>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">{{ .date }}</td>
+                    <td style="padding-left: 15px;">
+                        <strong>{{ .institution }}</strong><br>
+                        {{ .degree }} in {{ .subject }}<br>
+                        {{ .topics }}<br>
+                        {{ .supervisor }}
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+        {{ with $data.work.work }}
+        <h2 class="pt-4">{{.title}}</h2>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">{{ .date }}</td>
+                    <td style="padding-left: 15px;">
+                        <strong>{{ .name }}</strong><br>
+                        {{ .topics }}<br>
+                        {{ .employer }}
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+
+        {{ with $data.research_visits.research_visits }}
+        <h2 class="pt-4">{{.title}}</h2>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">{{ .date }}</td>
+                    <td style="padding-left: 15px;">
+                        <strong>{{ .role }}</strong><br>
+                        {{ .host }}<br>
+                        {{ .university }}, {{.country}}
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+
+        {{ with $data.teaching.students }}
+        <h2 class="pt-4">{{.title}}</h2>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">{{ .date }}</td>
+                    <td style="padding-left: 15px;">
+                        {{.name}} <br>
+                        {{.topic}} <br>
+                        {{.degree}}
+
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+
+        {{ with $data.teaching.lectures }}
+        <h2 class="pt-4">{{.title}}</h2>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">{{ .semester }}</td>
+                    <td style="padding-left: 15px;">
+                        <i>{{.subject}} </i><br>
+                        {{.position}} <br>
+                        {{.kind}}
+
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+
+        {{ partial "publications" . }}
+
+        {{ partial "talks.html" . }}
+
+    </div>
+</div>
+{{ end }}
