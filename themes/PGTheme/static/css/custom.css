@@ -18,6 +18,13 @@ h2 {
   /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
 }
 
+h3 {
+  color: #00796B;
+  font-weight: 200;
+  font-size: 1.4em;
+  /* This makes the size slightly smaller than normal text size */
+}
+
 body {
   font-weight: 200;
   /* 100 is the thinnest, 400 is normal, and 900 is the boldest */

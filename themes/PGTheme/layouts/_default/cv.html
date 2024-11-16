@@ -105,6 +105,28 @@
         </div>
         {{ end }}
 
+
+        {{ with $data.communityservice.communityservice }}
+        <h2 class="pt-4">{{.title}}</h2>
+        {{ range .items }}
+        <h3 class="pt-2">{{.title}}</h3>
+
+        <!-- Wrapper div for horizontal scrolling -->
+        <div style="overflow-x: auto;">
+            <table style="border-collapse: separate; border-spacing: 0 10px;">
+                {{ range .items }}
+                <tr>
+                    <td style="vertical-align: top; padding-right:15px;">{{ .conference }}</td>
+                    <td style="padding-left: 15px;">
+                        {{.year}}
+                    </td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+        {{ end }}
+        {{ end }}
+
         {{ partial "publications" . }}
 
         {{ partial "talks.html" . }}
