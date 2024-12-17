@@ -1,9 +1,10 @@
 communityservice:
   title: Community Service
   items:
-  #- title: Programm Comittee
-  #  items:
-  #    - conference : Advances in Cryptology (CRYPTO) 2023
+  - title: Programm Comittee
+    items:
+      - conference : Crypto Valley Conference (CVC)
+        year: 2025
   - title: External Reviews (Selected)
     items:
     - conference: Advances in Cryptology (CRYPTO)
