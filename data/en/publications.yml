@@ -2,7 +2,7 @@ publications :
   title: Publications
   items : 
       - title : "Fair Exchange for Decentralized Autonomous Organizations via Threshold Adaptor Signatures"
-        year : 2025
+        year : 
         authors : "Ruben Baecker, Paul Gerhart, Jonathan Katz, and Dominique Schröder"
         published : preprint 
         has_info : true 
