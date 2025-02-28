@@ -5,6 +5,8 @@ communityservice:
     items:
       - conference : Crypto Valley Conference (CVC)
         year: 2025
+      - conference : SECRYPT
+        year: 2025
   - title: External Reviews (Selected)
     items:
     - conference: Advances in Cryptology (CRYPTO)

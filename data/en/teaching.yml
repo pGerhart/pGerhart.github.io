@@ -4,6 +4,10 @@ teaching:
 lectures:
   title: Teaching Activities
   items :
+    - subject : Advanced Privacy Enhancing Technologies (M.Sc.) 
+      kind: Lecture
+      semester : Summer term 25
+      position : Teaching assistant
     - subject : Privacy Enhancing Technologies (B.Sc.) 
       kind: Lecture
       semester : Winter term 24/25
@@ -20,10 +24,6 @@ lectures:
 students:
   title : Supervised Students
   items:
-    - name: Katharina Schambach
-      date: 2024
-      degree: Bachelor Thesis
-      topic: "Atomic Swaps from Minimal Assumptions"
     - name: Fabian Jost 
       date: 2024
       degree: Master Thesis
