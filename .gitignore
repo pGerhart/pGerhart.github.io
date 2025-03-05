@@ -3,3 +3,7 @@
 .hugo_build.lock
 public/**/*
 resources/_gen/images/**/*
+themes/PGTheme/layouts/index 2.log
+themes/PGTheme/layouts/index.fdb_latexmk
+themes/PGTheme/layouts/index.log
+themes/PGTheme/layouts/index.fls

@@ -1,0 +1,149 @@
+\documentclass[nobranding,english,nologo,totpages]{europecv}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} 
+\usepackage[a4paper,top=1.27cm,left=1cm,right=1cm,bottom=2cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{bookmark}
+\usepackage{scrextend}
+\usepackage{pgfkeys}
+\usepackage{etoolbox}
+\usepackage{setspace} % Package to control the overall spacing
+\urlstyle{same}
+\usepackage{fontspec}
+
+
+\setmainfont[BoldFont={Montserrat-Regular.ttf}, ItalicFont={Montserrat-LightItalic.ttf}]{Montserrat-Light.ttf}
+
+\begin{document}
+
+\selectlanguage{english}
+
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ with $data.contact.contact }}
+\ecvname{ {{- .last_name -}}, {{- .first_name -}} }
+\ecvfootername{ {{- .first_name -}} {{- .last_name -}} }
+%\ecvdateofbirth{30.09.1999}
+\ecvaddress{ {{- .address_1 -}}, {{- .address_2 -}} }
+\ecvemail{\href{mailto:{{- .email -}}}{ {{- .email -}} }}
+\ecvhomepage{\url{ {{- .homepage -}} }}
+%\ecvpicture[width=3cm]{figures/your-photo.jpg}
+{{ end }}
+
+\begin{europecv}
+
+\ecvpersonalinfo[20pt]
+
+%\ecvitem{\large\textbf{Desired employment/ Occupational~field}}{\large\textbf{(Remove if not relevant)}}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\pdfbookmark{Education}{Education}
+\section{Education}
+{{ with $data.education.education }}
+{{ range .items }}
+%----------------------------------------------------------------------------------------
+\ecvitem{ {{- .date -}} }{\textbf{ {{- .institution -}} }}
+{{ if .topics }}
+\ecvitem{}{Main focus: {{ .topics -}} }
+{{ end }}
+\ecvitem{}{ {{- .degree -}} {{- if .supervisor}} under {{ .supervisor -}}{{end -}}, {{ .subject -}} \newline}
+{{ end }}
+{{ end }}
+%----------------------------------------------------------------------------------------
+%	EMPLOYMENT HISTORY
+%----------------------------------------------------------------------------------------
+\pdfbookmark{Work Experience}{Work Experience}
+\section{Work Experience}
+%----------------------------------------------------------------------------------------
+{{ with $data.work.work }}
+{{ range .items }} 
+\ecvitem{ {{- .date -}} }{\textbf{ {{-  .name -}} }} 
+\ecvitem{}{ {{- .topics -}} }
+{{ if .employer}}
+\ecvitem{}{ {{ .employer | replaceRE "&" "\\&" }} \newline}
+{{ else }}
+\ecvitem{}{}
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+{{ with $data.research_visits.research_visits }}
+\pdfbookmark{Internships}{Internships}
+\section{Internships}
+{{ range .items }}
+\ecvitem{ {{- .date -}} }{\textbf{ {{- .role -}} }}
+\ecvitem{}{ {{- .host -}} }
+\ecvitem{}{ {{- .university -}}, {{.country -}} } 
+\ecvitem{}{}
+
+{{ end }}
+{{ end }}
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	Selected Publications
+%----------------------------------------------------------------------------------------
+\pdfbookmark{Publications}{Publications}
+\section{Publications}
+%----------------------------------------------------------------------------------------
+{{ with $data.publications.publications }}
+{{ range .items }}
+{{ if not .hidden }}
+\ecvitem{ {{- .year -}} }{\textbf{ {{- .title -}} }}
+\ecvitem{}{ {{- .authors -}} }
+\ecvitem{}{ \small{ {{- .published -}} } }
+\ecvitem{}{}
+{{ end }}
+{{ end }}
+{{ end }}
+
+\pdfbookmark{Supervised Students}{Supervised Students}
+\section{Supervised Students}
+{{ with $data.teaching.students }}
+{{ range .items }}
+\ecvitem{ {{- .date -}} }{\textbf{ {{- .name -}} } }
+\ecvitem{}{\textit{ {{- .topic -}} }}
+\ecvitem{}{ {{- .degree -}} }
+\ecvitem{}{}
+{{ end }}
+{{ end }}
+
+\pdfbookmark{Teaching Activities}{Teaching Activities}
+\section{Teaching Activities}
+{{ with $data.teaching.lectures }}
+{{ range .items }}
+\ecvitem{ {{- .semester -}} }{\textbf{ {{- .subject -}} }}
+{{ if .position }}
+\ecvitem{}{ {{- .position -}} }
+{{ end }}
+\ecvitem{}{}
+{{ end }}
+{{ end }}
+
+
+{{ with $data.communityservice.communityservice }}
+\pdfbookmark{ {{.title}} }{ {{.title}} }
+
+\section{ {{.title }} }
+
+{{ range .items }}
+
+\ecvitem{\textbf{ {{- .title -}}}}{}
+{{ range .items }}
+    \ecvitem{ {{- .year -}} }{ {{- .conference -}} } 
+{{ end }}
+\ecvitem{}{}
+{{ end }}
+{{ end }}
+
+
+
+
+\end{europecv}
+\end{document}

@@ -38,6 +38,20 @@ author = "Paul Gerhart"
 title = "Paul Gerhart"
 ustid = ""
 
+[mediaTypes]
+[mediaTypes."application/x-tex"]
+suffixes = ["tex"]
+
+[outputFormats]
+[outputFormats.TEX]
+mediaType = "application/x-tex"
+baseName = "index"
+isPlainText = true
+notAlternative = true
+
+[outputs]
+home = ["HTML", "TEX"]
+
 
 ################################ English Language ########################
 [Languages.en]
