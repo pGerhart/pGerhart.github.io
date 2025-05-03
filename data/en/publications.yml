@@ -1,6 +1,13 @@
 publications : 
   title: Publications
   items : 
+      - title : "Fully-Adaptive UC Threshold Partially OPRFs"
+        year : "2025"
+        authors : "Ruben Baecker, Paul Gerhart, Daniel Rausch, and Dominique Schröder"
+        published : CRYPTO 
+        has_info : true 
+        abstract : ""  
+        pdf: ""
       - title : "Fair Exchange for Decentralized Autonomous Organizations via Threshold Adaptor Signatures"
         year : ""
         authors : "Ruben Baecker, Paul Gerhart, Jonathan Katz, and Dominique Schröder"
