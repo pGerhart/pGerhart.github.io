@@ -1,7 +1,7 @@
 publications : 
   title: Publications
   items : 
-      - title : "Fully-Adaptive Threshold Partially-Oblivious PRFs"
+      - title : "A Fully-Adaptive Threshold Partially-Oblivious PRF"
         year : "2025"
         authors : "Ruben Baecker, Paul Gerhart, Daniel Rausch, and Dominique Schröder"
         published : CRYPTO 
