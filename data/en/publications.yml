@@ -11,7 +11,7 @@ publications :
 
       - title : "A Fully-Adaptive Threshold Partially-Oblivious PRF"
         year : 2025
-        authors : "Ruben Baecker, Paul Gerhart, Daniel Rausch, and Dominique Schröder"
+        authors : Ruben Baecker, Paul Gerhart, Daniel Rausch, and Dominique Schröder
         published : CRYPTO 
         has_info : true 
         abstract : ""  
@@ -62,7 +62,7 @@ publications :
         authors : supervised by Wolfgang Lück and Christoph Winges
         published : Bachelor Thesis
         # Detailed Information
-        has_info : true 
+        has_info : false 
         abstract : "In this thesis we aim to prove that every 3-manifold M arises from a surgery on a link on  S3. In order to do that, we show the existence of a so-called Heegaard-Splitting of M and S3 of the same genus.  Now to fit the both Splittings into each other, it is required to move certain links, so-called characteristic curves, on the surfaces into each other.  To achieve this, we have to cut out solid tori and thus get a homeomorphic copy S3 without the interiors of the tori of M without another set of Tori.  Now if we glue them back in the right way, which we can regard as a Dehn surgery, we obtain a homeomorphism between M and S3."
         hidden: true
         # bibtex : ""

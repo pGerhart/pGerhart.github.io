@@ -28,7 +28,7 @@
                         {{ .title }}
                         {{ end }}<br>
                         {{ .authors }} <br>
-                        <b>{{ .published }} {{if .pdf }} {{.year}}{{end}} </b>
+                        <b>{{ .published }} {{if .has_info }} {{.year}}{{end}} </b>
                     </td>
                 </tr>
                 {{ end }}
