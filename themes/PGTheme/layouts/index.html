@@ -67,6 +67,9 @@
                     href="https://www.uni-bonn.de" target="_blank">University of Bonn</a>, Germany, from 2017 to 2020.
             </p>
 
+
+
+
             <h2 class="pt-4">Recent <a href="/publications">Publications</a></h2>
             {{ with $data.publications.publications }}
             {{ range first 4 .items }}
@@ -83,6 +86,20 @@
 
             {{ end }}
             {{ end }}
+            {{ with $data.preprints.preprints }}
+            {{ if gt (len .) 0 }}
+
+            <h2 class="pt-4">Preprints</h2>
+            {{ range . }}
+            {{ if .pdf }}
+            <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
+            {{ else }}
+            {{ .title }}
+            {{ end }}<br>
+            {{ .authors }} <br>
+            {{ end }}
+            {{ end }}
+            {{end }}
 
         </div>
 

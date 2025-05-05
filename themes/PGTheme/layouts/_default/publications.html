@@ -6,6 +6,23 @@
 <div class="container pt-2 pt-3">
     <div class="row">
 
+        {{ with $data.preprints.preprints }}
+        {{ if gt (len .) 0 }}
+        <h2 class="pt-4">Preprints</h2>
+        {{ range . }}
+        <p>
+
+            {{ if .pdf }}
+            <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
+            {{ else }}
+            {{ .title }}
+            {{ end }}<br>
+            {{ .authors }} <br>
+
+        </p>
+        {{ end }}
+        {{ end }}
+        {{end }}
 
         {{ with $data.publications.publications }}
         <h2 class="pt-4">{{.title}}</h2>
