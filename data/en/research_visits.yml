@@ -2,6 +2,11 @@ research_visits:
   title: Research Visits
   items :
   
+    - role: "Research Internship"
+      date: "08/2025 - 10/2025"
+      university: "Cornell Tech"
+      country: "New York, NY"
+      host: "Prof. Thomas Ristenpart"
     - role: "Research Visit"
       date: "08/2024"
       university: "Brown University"
