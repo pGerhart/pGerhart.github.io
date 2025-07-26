@@ -1,8 +1,15 @@
 preprints:
+- title : "Universally Composable Adaptor Signatures"
+  year : ""
+  authors : "Paul Gerhart, Daniel Rausch, and Dominique Schröder"
+  published : preprint 
+  has_info : true 
+  abstract : ""  
+  pdf: "https://eprint.iacr.org/2025/1363.pdf"
 - title : "Fair Exchange for Decentralized Autonomous Organizations via Threshold Adaptor Signatures"
   year : ""
   authors : "Ruben Baecker, Paul Gerhart, Jonathan Katz, and Dominique Schröder"
   published : preprint 
   has_info : true 
   abstract : ""  
-  pdf: "https://eprint.iacr.org/2025/388"
+  pdf: "https://eprint.iacr.org/2025/388.pdf"

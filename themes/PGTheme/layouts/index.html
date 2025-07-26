@@ -91,13 +91,17 @@
 
             <h2 class="pt-4">Preprints</h2>
             {{ range . }}
-            {{ if .pdf }}
-            <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
-            {{ else }}
-            {{ .title }}
-            {{ end }}<br>
-            {{ .authors }} <br>
+            <p class="pb-2">
+
+                {{ if .pdf }}
+                <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
+                {{ else }}
+                {{ .title }}
+                {{ end }}<br>
+                {{ .authors }} <br>
+            </p>
             {{ end }}
+
             {{ end }}
             {{end }}
 
