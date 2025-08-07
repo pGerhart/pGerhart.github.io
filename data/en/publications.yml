@@ -7,7 +7,7 @@ publications :
         published : CRYPTO 
         has_info : true 
         abstract : ""  
-        pdf: "https://www.ruben-baecker.de/paper/A_Fully-Adaptive_Threshold_Partially-Oblivious_PRF.pdf"
+        pdf: "https://eprint.iacr.org/2025/1433.pdf"
         
       - title : "SoK: Descriptive Statistics Under Local Differential Privacy"
         year : 2025
