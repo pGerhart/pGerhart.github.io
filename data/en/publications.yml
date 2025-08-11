@@ -7,7 +7,7 @@ publications :
         published : ASIACRYPT 
         has_info : true 
         abstract : ""
-      - title : "Universally Composable and Round-Optimal Password-Hardened Encryption"
+      - title : "Universally Composable Password-Hardened Encryption"
         year : 2025
         authors : Behzad Abdolmaleki, Ruben Baecker, Paul Gerhart, Mike Graf, Mojtaba Khalili, Daniel Rausch, Fritz Schmidt, and Dominique Schröder
         published : ASIACRYPT
