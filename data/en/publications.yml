@@ -9,7 +9,7 @@ publications :
         abstract : ""
       - title : "Universally Composable Password-Hardened Encryption"
         year : 2025
-        authors : Behzad Abdolmaleki, Ruben Baecker, Paul Gerhart, Mike Graf, Mojtaba Khalili, Daniel Rausch, Fritz Schmidt, and Dominique Schröder
+        authors : Behzad Abdolmaleki, Ruben Baecker, Paul Gerhart, Mike Graf, Mojtaba Khalili, Daniel Rausch, and Dominique Schröder
         published : ASIACRYPT
         has_info : true 
         abstract : ""
