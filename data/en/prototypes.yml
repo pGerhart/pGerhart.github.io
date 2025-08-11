@@ -1,0 +1,32 @@
+prototypes:
+  title: "Prototypes" 
+  items:
+
+
+    - name : "HildeGUARD"
+      description: "A semi-adaptively secure password-hardened encryption scheme"
+      logo: "HildeGuardLogo.png"
+      pdf: ""
+      code: "https://github.com/pGerhart/HildeGUARD"
+      demo: ""
+
+    - name: Attack-SimplePHE
+      description: A semi-adaptive corruption attack on Virgil Security's PHE implementation
+      logo: AttackSimplePHE.jpg
+#      pdf: "https://eprint.iacr.org/2025/1363.pdf"
+      code: "https://github.com/pGerhart/attack-simplephe"
+      demo: ""
+
+    - name: SimplePHE
+      description: A Rust reimplementation of SimplePHE (USENIX 2018) as baseline for HildeGUARD benchmarks
+      logo: SimplePHE.jpg
+      pdf: "https://www.usenix.org/conference/usenixsecurity18/presentation/lai"
+      code: "https://github.com/pGerhart/SimplePHE"
+      demo: ""
+
+    - name : "VisualAnon"
+      description: "An interactive tool to explore conditional anonymity using population statistics"
+      logo: "VisualAnonLogo.jpg"
+      pdf: "https://eprint.iacr.org/2024/998.pdf"
+      code: "https://github.com/pGerhart/VisualAnon"
+      demo: "https://visualanon.org"

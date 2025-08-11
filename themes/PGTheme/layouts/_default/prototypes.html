@@ -1,0 +1,44 @@
+{{ define "content" }}
+{{ $data := index site.Data site.Language.Lang }}
+
+<div class="container pt-2 pt-3">
+    <div class="row">
+        <h2 class="pt-4">{{ $data.prototypes.prototypes.title }}</h2>
+
+        <p>{{ .Content }}</p>
+
+        {{ with $data.prototypes.prototypes }}
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <tbody>
+                    {{ range .items }}
+                    {{ $item := . }}
+                    <tr class="align-middle">
+                        <td class="text-center pb-4" style="width:120px;">
+                            {{ with $item.logo }}
+                            <img src="/Logos/{{ . }}" alt="{{ $item.name }} logo" class="img-fluid rounded"
+                                style="width:100px;height:100px;object-fit:contain;">
+                            {{ end }}
+                        </td>
+                        <td class="ps-3 pb-4">
+                            <strong>{{ $item.name }}</strong><br>
+                            <p class="mb-2">{{ $item.description }}</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                {{ if $item.code }}<a href="{{ $item.code }}" class="btn btn-sm btn-outline-secondary"
+                                    target="_blank">Code</a>{{ end }}
+                                {{ if $item.demo }}<a href="{{ $item.demo }}" class="btn btn-sm btn-outline-success"
+                                    target="_blank">Demo</a>{{ end }}
+                                {{ if $item.pdf }}<a href="{{ $item.pdf }}" class="btn btn-sm btn-outline-primary"
+                                    target="_blank">Paper</a>{{ end }}
+                            </div>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}

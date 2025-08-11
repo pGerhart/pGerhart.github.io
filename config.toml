@@ -20,9 +20,14 @@ url = "/publications"
 weight = 2
 
 [[Languages.en.menu.main]]
+name = "Prototypes"
+url = "/prototypes"
+weight = 3
+
+[[Languages.en.menu.main]]
 name = "Talks"
 url = "/talks"
-weight = 3
+weight = 4
 
 
 [[Languages.en.menu.main]]
