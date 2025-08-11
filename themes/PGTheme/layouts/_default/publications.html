@@ -39,11 +39,9 @@
                         {{ end }}
                     </td>
                     <td style="padding-left: 15px;">
-                        {{ if .pdf }}
-                        <a href="{{ .pdf }}" class="" target="_blank">{{ .title }} </a>
-                        {{ else }}
-                        {{ .title }}
-                        {{ end }}<br>
+                        <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }} style="color: #00796B;">
+                            {{ .title }}
+                        </a><br>
                         {{ .authors }} <br>
                         <b>{{ .published }} {{if .has_info }} {{.year}}{{end}} </b>
                     </td>
