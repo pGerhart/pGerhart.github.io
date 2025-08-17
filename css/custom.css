@@ -107,8 +107,8 @@ section {
 /* Hover effect like links */
 .btn:hover {
   color: white;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color-dark);
+  background-color: black;
+  border-color: black;
 }
 
 /* Optional active/focus state */
