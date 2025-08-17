@@ -23,20 +23,10 @@
                 Office: FB 0307 <br>
                 Email: {{.email_anon}} <br>
                 <!-- Profile buttons -->
-                <!-- Profile buttons -->
-            <div class="d-flex flex-wrap gap-2">
-                <a href="{{ .scholar }}" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer"
-                    aria-label="Open Google Scholar profile">
-                    Google Scholar
-                </a>
-                <a href="{{ .dblp }}" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer"
-                    aria-label="Open DBLP profile">
-                    DBLP
-                </a>
-                <a href="{{ .github }}" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer"
-                    aria-label="Open GitHub profile">
-                    GitHub
-                </a>
+            <div class="btn-group-gap">
+                <a class="btn-minimal" href="{{.scholar}}" target="_blank">Google Scholar</a>
+                <a class="btn-minimal" href="{{.dblp}}" target="_blank">DBLP</a>
+                <a class="btn-minimal" href="{{.github}}" target="_blank">GitHub</a>
             </div>
             </p>
             {{ end }}
@@ -140,11 +130,11 @@
                                 <strong>{{ $item.name }}</strong><br>
                                 <p class="mb-2">{{ $item.description }}</p>
                                 <div class="d-flex flex-wrap gap-2">
-                                    {{ if $item.code }}<a href="{{ $item.code }}"
-                                        class="btn btn-sm btn-outline-secondary" target="_blank">Code</a>{{ end }}
-                                    {{ if $item.demo }}<a href="{{ $item.demo }}" class="btn btn-sm btn-outline-success"
+                                    {{ if $item.code }}<a href="{{ $item.code }}" class="btn-minimal"
+                                        target="_blank">Code</a>{{ end }}
+                                    {{ if $item.demo }}<a href="{{ $item.demo }}" class="btn-minimal"
                                         target="_blank">Demo</a>{{ end }}
-                                    {{ if $item.pdf }}<a href="{{ $item.pdf }}" class="btn btn-sm btn-outline-primary"
+                                    {{ if $item.pdf }}<a href="{{ $item.pdf }}" class="btn-minimal"
                                         target="_blank">Paper</a>{{ end }}
                                 </div>
                             </td>

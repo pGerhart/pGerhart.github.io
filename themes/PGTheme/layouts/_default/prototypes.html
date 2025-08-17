@@ -24,11 +24,11 @@
                             <strong>{{ $item.name }}</strong><br>
                             <p class="mb-2">{{ $item.description }}</p>
                             <div class="d-flex flex-wrap gap-2">
-                                {{ if $item.code }}<a href="{{ $item.code }}" class="btn btn-sm btn-outline-secondary"
+                                {{ if $item.code }}<a href="{{ $item.code }}" class="btn-minimal"
                                     target="_blank">Code</a>{{ end }}
-                                {{ if $item.demo }}<a href="{{ $item.demo }}" class="btn btn-sm btn-outline-success"
+                                {{ if $item.demo }}<a href="{{ $item.demo }}" class="btn-minimal"
                                     target="_blank">Demo</a>{{ end }}
-                                {{ if $item.pdf }}<a href="{{ $item.pdf }}" class="btn btn-sm btn-outline-primary"
+                                {{ if $item.pdf }}<a href="{{ $item.pdf }}" class="btn-minimal"
                                     target="_blank">Paper</a>{{ end }}
                             </div>
                         </td>
