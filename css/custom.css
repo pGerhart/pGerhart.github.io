@@ -117,3 +117,44 @@ section {
   border-color: var(--accent-color-dark);
   color: white;
 }
+
+
+/* Publications: minimal styling */
+.pub-entry {
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.pub-title a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: inherit;
+  /* stay black */
+}
+
+.pub-title a:hover {
+  color: var(--accent-color);
+  /* subtle accent on hover */
+}
+
+.pub-authors {
+  color: #666;
+  /* de-emphasize */
+  margin-top: .15rem;
+}
+
+.venue-row {
+  margin-top: .25rem;
+  gap: .5rem;
+  align-items: baseline;
+}
+
+.venue-badge {
+  display: inline-block;
+  background: #f4f4f4;
+  color: #333;
+  font-size: .82rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
