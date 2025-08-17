@@ -16,11 +16,19 @@
                 {{ end }}
             </td>
             <td style="padding-left: 15px;">
-                <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
-                    {{ .title }}
-                </a><br>
-                {{ .authors }} <br>
-                <b>{{ .published }} {{if .pdf }} {{.year}}{{end}} </b>
+                <div class="pub-entry">
+                    <div class="pub-title">
+                        <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
+                            {{ .title }}
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        {{ .authors }}
+                    </div>
+                    <div class="venue-row">
+                        <span class="venue-badge">{{ .published }} {{.year}}</span>
+                    </div>
+                </div>
             </td>
         </tr>
         {{ end }}

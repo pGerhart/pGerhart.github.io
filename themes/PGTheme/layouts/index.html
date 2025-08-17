@@ -86,31 +86,37 @@
             <h2 class="pt-4">Recent Publications</h2>
             {{ with $data.publications.publications }}
             {{ range first 4 .items }}
-            <p class="pb-2">
-                <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
-                    {{ .title }}
-                </a><br>
-                {{ .authors }} <br>
-                <b>{{ .published }} {{.year }}</b>
-
-            </p>
-
+            <div class="pub-entry">
+                <div class="pub-title">
+                    <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
+                        {{ .title }}
+                    </a>
+                </div>
+                <div class="pub-authors">
+                    {{ .authors }}
+                </div>
+                <div class="venue-row">
+                    <span class="venue-badge">{{ .published }} {{.year}}</span>
+                </div>
+            </div>
             {{ end }}
             {{ end }}
+
             {{ with $data.preprints.preprints }}
             {{ if gt (len .) 0 }}
 
             <h2 class="pt-4">Preprints</h2>
             {{ range . }}
-            <p class="pb-2">
-
-                {{ if .pdf }}
-                <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
-                {{ else }}
-                {{ .title }}
-                {{ end }}<br>
-                {{ .authors }} <br>
-            </p>
+            <div class="pub-entry">
+                <div class="pub-title">
+                    <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
+                        {{ .title }}
+                    </a>
+                </div>
+                <div class="pub-authors">
+                    {{ .authors }}
+                </div>
+            </div>
             {{ end }}
 
             {{ end }}
@@ -121,7 +127,7 @@
             <div class="table-responsive">
                 <table class="table table-borderless">
                     <tbody>
-                        {{ range first 2 .items }}
+                        {{ range first 3 .items }}
                         {{ $item := . }}
                         <tr class="align-middle">
                             <td class="text-center pb-4" style="width:120px;">

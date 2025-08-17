@@ -8,19 +8,21 @@
 
         {{ with $data.preprints.preprints }}
         {{ if gt (len .) 0 }}
+
         <h2 class="pt-4">Preprints</h2>
         {{ range . }}
-        <p>
-
-            {{ if .pdf }}
-            <a href="{{ .pdf }}" target="_blank">{{ .title }}</a>
-            {{ else }}
-            {{ .title }}
-            {{ end }}<br>
-            {{ .authors }} <br>
-
-        </p>
+        <div class="pub-entry">
+            <div class="pub-title">
+                <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
+                    {{ .title }}
+                </a>
+            </div>
+            <div class="pub-authors">
+                {{ .authors }}
+            </div>
+        </div>
         {{ end }}
+
         {{ end }}
         {{end }}
 
@@ -39,11 +41,19 @@
                         {{ end }}
                     </td>
                     <td style="padding-left: 15px;">
-                        <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
-                            {{ .title }}
-                        </a><br>
-                        {{ .authors }} <br>
-                        <b>{{ .published }} {{if .has_info }} {{.year}}{{end}} </b>
+                        <div class="pub-entry">
+                            <div class="pub-title">
+                                <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
+                                    {{ .title }}
+                                </a>
+                            </div>
+                            <div class="pub-authors">
+                                {{ .authors }}
+                            </div>
+                            <div class="venue-row">
+                                <span class="venue-badge">{{ .published }} {{.year}}</span>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 {{ end }}

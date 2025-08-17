@@ -18,13 +18,20 @@
 
             </td>
             <td style="padding-left: 15px;">
-                {{ if .slides }}
-                <a href="/talks/{{ .slides }}" class="" target="_blank">{{ .title }} </a>
-                {{ else }}
-                {{ .title }}
-                {{ end }}<br>
-                <b>{{.stage}} {{.year}}</b><br>
-                {{.location}}
+                <div class="pub-entry">
+                    <div class="pub-title">
+
+                        <a {{ if .slides }} href="/talks/{{ .slides }}" target="_blank" {{ end }}>
+                            {{ .title }}
+                        </a>
+                    </div>
+                    <div class="venue-row">
+                        <span class="venue-badge">{{ .stage }} {{.year}}</span>
+                    </div>
+                    <div class="pub-authors">
+                        {{.location}}
+                    </div>
+                </div>
             </td>
         </tr>
         {{ end }}

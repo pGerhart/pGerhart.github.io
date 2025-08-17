@@ -11,7 +11,7 @@ prototypes:
       demo: ""
 
     - name: Attack-SimplePHE
-      description: A semi-adaptive corruption attack on Virgil Security's PHE implementation
+      description: A semi-adaptive corruption attack on Virgil Security's SimplePHE implementation
       logo: AttackSimplePHE.jpg
 #      pdf: "https://eprint.iacr.org/2025/1363.pdf"
       code: "https://github.com/pGerhart/attack-simplephe"
