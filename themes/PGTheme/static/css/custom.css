@@ -1,43 +1,120 @@
+:root {
+  --accent-color: #1565C0;
+  /* blue */
+  --accent-color-dark: #0D47A1;
+  /* darker hover */
+  --font-weight-thin: 300;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  /* softer than default bold */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-thin);
+  line-height: 1.65;
+  color: #111;
+}
+
+/* Contact info */
 .more-height {
-  /* For the contact info*/
   line-height: 2;
 }
 
+/* Paragraphs */
 p {
-  font-weight: 200;
-  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
+  font-weight: var(--font-weight-thin);
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+  /* make titles all caps */
+  /* add spacing for elegance */
 }
 
 h1 {
-  font-weight: 200;
+  font-size: 2.2rem;
 }
 
 h2 {
-  color: #00796B;
-  font-weight: 200;
-  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
+  font-size: 1.7rem;
+  padding-bottom: 0.2rem;
 }
 
 h3 {
-  color: #00796B;
-  font-weight: 200;
-  font-size: 1.4em;
-  /* This makes the size slightly smaller than normal text size */
+  font-size: 1.3rem;
+  color: var(--accent-color);
 }
 
-body {
-  font-weight: 200;
-  /* 100 is the thinnest, 400 is normal, and 900 is the boldest */
-}
-
+/* Links */
 a {
-  color: #00796B;
-  /* Teal color */
+  color: black;
   text-decoration: underline;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-  color: #004D40;
-  cursor: help;
+  color: var(--accent-color);
+  cursor: pointer;
+}
 
+/* Bold text */
+b,
+strong {
+  font-weight: var(--font-weight-normal);
+  /* lighter than default 700 */
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* Text container width */
+.container {
+  max-width: 900px;
+}
+
+/* Navbar overrides */
+.navbar,
+.navbar a,
+.navbar .nav-link,
+.navbar-brand {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-thin);
+}
+
+/* Button base */
+.btn {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-normal);
+  border-radius: 6px;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect like links */
+.btn:hover {
+  color: white;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color-dark);
+}
+
+/* Optional active/focus state */
+.btn:active,
+.btn:focus {
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
+  color: white;
 }

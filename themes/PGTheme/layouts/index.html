@@ -22,9 +22,22 @@
                 TU Wien <br>
                 Office: FB 0307 <br>
                 Email: {{.email_anon}} <br>
-                <a href="{{.scholar}}" class="" title="Google Scholar">Google Scholar</a>
-                <a href="{{.dblp}}" class="" title="DBLP">DBLP</a>
-                <a href="{{.github}}" class="" title="GitHub">GitHub</a>
+                <!-- Profile buttons -->
+                <!-- Profile buttons -->
+            <div class="d-flex flex-wrap gap-2">
+                <a href="{{ .scholar }}" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open Google Scholar profile">
+                    Google Scholar
+                </a>
+                <a href="{{ .dblp }}" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open DBLP profile">
+                    DBLP
+                </a>
+                <a href="{{ .github }}" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open GitHub profile">
+                    GitHub
+                </a>
+            </div>
             </p>
             {{ end }}
         </div>
@@ -74,7 +87,7 @@
             {{ with $data.publications.publications }}
             {{ range first 4 .items }}
             <p class="pb-2">
-                <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }} style="color: #00796B;">
+                <a {{ if .pdf }} href="{{ .pdf }}" target="_blank" {{ end }}>
                     {{ .title }}
                 </a><br>
                 {{ .authors }} <br>
