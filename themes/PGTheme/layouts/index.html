@@ -73,7 +73,9 @@
 
 
 
-            <h2 class="pt-4">Recent Publications</h2>
+            <h2 class="pt-4">
+                <a href="/publications" style="text-decoration:none;">Recent Publications</a>
+            </h2>
             {{ with $data.publications.publications }}
             {{ range first 4 .items }}
             <div class="pub-entry">
@@ -95,7 +97,9 @@
             {{ with $data.preprints.preprints }}
             {{ if gt (len .) 0 }}
 
-            <h2 class="pt-4">Preprints</h2>
+            <h2 class="pt-4">
+                <a href="/publications" style="text-decoration:none;">Preprints</a>
+            </h2>
             {{ range . }}
             <div class="pub-entry">
                 <div class="pub-title">
@@ -113,7 +117,9 @@
             {{end }}
             {{ with $data.prototypes.prototypes }}
             {{ if gt (len .items) 0 }}
-            <h2 class="pt-4">Recent Prototypes</h2>
+            <h2 class="pt-4">
+                <a href="/prototypes" style="text-decoration:none;">Recent Prototypes</a>
+            </h2>
             <div class="table-responsive">
                 <table class="table table-borderless">
                     <tbody>
