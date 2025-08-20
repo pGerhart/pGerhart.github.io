@@ -59,6 +59,8 @@ a {
   color: black;
   text-decoration: underline;
   transition: color 0.2s ease-in-out;
+  text-decoration-thickness: .75px;
+  /* adjust to taste */
 }
 
 a:hover {
@@ -159,10 +161,7 @@ section {
   border-radius: 4px;
 }
 
-a {
-  /*text-decoration: none;*/
-  border-bottom: 1px solid transparent;
-}
+
 
 a:hover {
   color: var(--accent-color);
