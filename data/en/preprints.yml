@@ -1,4 +1,12 @@
 preprints:
+- title : "Fully-Adaptive Two-Round Threshold Schnorr Signatures from DDH"
+  year : ""
+  authors : "Paul Gerhart, Davide Li Calsi, Luigi Russo, and Dominique Schröder"
+  published : preprint 
+  has_info : true 
+  abstract : ""  
+  pdf: "https://eprint.iacr.org/2025/1478"
+
 - title : "Universally Composable Adaptor Signatures"
   year : ""
   authors : "Paul Gerhart, Daniel Rausch, and Dominique Schröder"
