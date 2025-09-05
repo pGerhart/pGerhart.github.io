@@ -1,4 +1,12 @@
 preprints:
+- title : "BitPriv: A Privacy-Preserving Protocol for DeFi Applications on Bitcoin"
+  year : ""
+  authors : "Ioannis Alexopoulos, Zeta Avarikioti, Paul Gerhart, Matteo Maffei, and Dominique Schröder"
+  published : preprint 
+  has_info : true 
+  abstract : ""  
+  pdf: "https://eprint.iacr.org/2025/1575"
+
 - title : "Fully-Adaptive Two-Round Threshold Schnorr Signatures from DDH"
   year : ""
   authors : "Paul Gerhart, Davide Li Calsi, Luigi Russo, and Dominique Schröder"
