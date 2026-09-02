@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Logos/
+
+# Keep PDFs out of search results (the HTML pages stay indexable)
+Disallow: /*.pdf$
+
+Sitemap: https://www.paul-gerhart.de/sitemap.xml
