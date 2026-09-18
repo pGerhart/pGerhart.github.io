@@ -1,0 +1,1254 @@
+:root {
+  --accent-color: #1565C0;
+  /* blue */
+  --accent-color-dark: #0D47A1;
+  /* darker hover */
+  --font-weight-thin: 300;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  /* softer than default bold */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-thin);
+  line-height: 1.65;
+  color: #111;
+  /* The footer is pushed down with mt-auto, which only has an effect when the
+     flex column is taller than its content — and .h-100 resolves to auto here,
+     because <html> has no height of its own. This gives it one. */
+  min-height: 100vh;
+}
+
+@supports (min-height: 100dvh) {
+  body {
+    min-height: 100dvh;
+  }
+}
+
+/* Contact info */
+.more-height {
+  line-height: 2;
+}
+
+/* Paragraphs */
+p {
+  font-weight: var(--font-weight-thin);
+  margin-bottom: 1rem;
+}
+
+/* Running prose is justified. Hyphenation comes with it — without it the
+   word gaps tear open on a phone-width column. */
+main p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Blocks that set their own alignment: the home header (centred on phones),
+   callout titles, and the short descriptions inside tables. */
+.home-header p,
+.md-alert-title,
+td p {
+  text-align: inherit;
+  hyphens: manual;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+  /* make titles all caps */
+  /* add spacing for elegance */
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  padding-bottom: 0.2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/* Links */
+a {
+  color: black;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+  text-decoration-thickness: .75px;
+  /* adjust to taste */
+}
+
+a:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Bold text */
+b,
+strong {
+  font-weight: var(--font-weight-normal);
+  /* lighter than default 700 */
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* Text container width.
+
+   The cap alone is not enough: at a window of 1300 the container is 1280 and
+   the text ends up ten pixels from the edge, while at 1100 it touches it. The
+   gutter therefore grows with the window until it reaches 3rem, so there is
+   always air beside the text no matter where the window is dragged to. */
+.container {
+  max-width: 1280px;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
+
+/* Navbar overrides */
+.navbar,
+.navbar a,
+.navbar .nav-link,
+.navbar-brand {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-thin);
+}
+
+/* Button base */
+.btn {
+  font-family: var(--body-font);
+  font-weight: var(--font-weight-normal);
+  border-radius: 6px;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect like links */
+.btn:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+/* Optional active/focus state */
+.btn:active,
+.btn:focus {
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
+  color: white;
+}
+
+
+/* Publications: minimal styling */
+.pub-entry {
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.pub-title a:hover {
+  color: var(--accent-color);
+  /* subtle accent on hover */
+}
+
+.pub-authors {
+  color: #666;
+  /* de-emphasize */
+  margin-top: .15rem;
+}
+
+.venue-row {
+  margin-top: .25rem;
+  gap: .5rem;
+  align-items: baseline;
+}
+
+.venue-badge {
+  display: inline-block;
+  background: #f4f4f4;
+  color: #333;
+  font-size: .82rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+
+.btn-minimal {
+  border: 1px solid #111;
+  color: #111;
+  background: transparent;
+  padding: .35rem .6rem;
+  border-radius: .4rem;
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.btn-minimal:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-group-gap {
+  display: flex;
+  gap: .5rem;
+  /* keep the profile links on one row; if the viewport is too narrow they
+     scroll sideways instead of wrapping onto a second line */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: .25rem;
+}
+
+.btn-group-gap > * {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* CV entries: same three-step hierarchy as the PDF —
+   near-black main line, medium-grey description, lighter date column */
+/* CV page heading with the PDF button on the same line */
+.cv-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cv-date {
+  color: #6A6A6A;
+  font-size: .92em;
+}
+
+/* keep dates on one line where there is room; on phones they may wrap */
+@media (min-width: 576px) {
+  .cv-date {
+    white-space: nowrap;
+  }
+}
+
+.cv-detail {
+  color: #4F4F4F;
+  font-size: .92em;
+}
+
+/* GitHub-style markdown callouts (> [!NOTE|TIP|IMPORTANT|WARNING|CAUTION]) */
+.md-alert {
+  margin: 1.25rem 0;
+  padding: .6rem 1rem;
+  border-left: .25rem solid var(--alert-color, #888);
+  background: color-mix(in srgb, var(--alert-color, #888) 6%, transparent);
+  border-radius: 0 .4rem .4rem 0;
+}
+
+.md-alert>*:last-child {
+  margin-bottom: 0;
+}
+
+.md-alert-title {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: .35rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--alert-color);
+}
+
+.md-alert-icon {
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
+.md-alert-note {
+  --alert-color: #0969da;
+}
+
+.md-alert-tip {
+  --alert-color: #1a7f37;
+}
+
+.md-alert-important {
+  --alert-color: #8250df;
+}
+
+.md-alert-warning {
+  --alert-color: #9a6700;
+}
+
+.md-alert-caution {
+  --alert-color: #cf222e;
+}
+/* Profile links carry both an icon and a label; only one is shown at a time. */
+.btn-icon {
+  display: none;
+  /* the Matrix mark is an inline SVG, so it needs the baseline nudge that
+     bootstrap-icons applies to its own glyphs */
+  vertical-align: -.125em;
+}
+
+.portrait-img {
+  /* matches Bootstrap's .rounded, which cannot be overridden per breakpoint
+     because its utilities are !important */
+  border-radius: .375rem;
+}
+
+/* Home header: portrait beside the name block.
+   On phones the columns stack, and the 2:3 portrait would fill nearly the
+   whole screen — so there it becomes a small centred avatar with the name
+   and contact details underneath, and the profile links shrink to icons. */
+@media (max-width: 767.98px) {
+  .home-header {
+    text-align: center;
+  }
+
+  .portrait-img {
+    display: block;
+    width: min(200px, 55vw);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    /* crop towards the face rather than the middle of the frame */
+    object-position: 50% 25%;
+    border-radius: 50%;
+    margin-inline: auto;
+  }
+
+  .home-header .btn-group-gap {
+    justify-content: center;
+    /* as icons they fit on one line, so no sideways scrolling is needed */
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: .9rem;
+  }
+
+  .home-header .btn-label {
+    display: none;
+  }
+
+  .home-header .btn-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  /* bare icons instead of outlined buttons */
+  .home-header .btn-minimal {
+    border: 0;
+    padding: .2rem .3rem;
+  }
+}
+
+/* ===================================================================
+   Blog
+
+   The page furniture keeps the house style — thin Montserrat, uppercase
+   section headings, the blue accent on hover. Post titles are the one
+   deliberate exception: "PUBLICATIONS" reads fine in caps because it is one
+   word, a sentence-long post title does not, so titles here stay in the case
+   they were written in and carry the weight through size and spacing instead.
+   =================================================================== */
+
+.blog-intro {
+  color: #4F4F4F;
+  max-width: 34em;
+}
+
+/* --- List of posts --- */
+
+.blog-list {
+  margin-top: 2rem;
+}
+
+.blog-entry+.blog-entry {
+  border-top: 1px solid #eee;
+}
+
+/* The whole entry is the link. The underline every other link on the site
+   carries would sit under the summary too, so it is moved onto the title
+   alone, and only on hover. */
+.blog-entry-link {
+  display: block;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-entry-link:hover {
+  color: inherit;
+}
+
+.blog-meta {
+  color: #6A6A6A;
+  font-size: .88rem;
+  letter-spacing: .02em;
+}
+
+.blog-meta-sep {
+  margin: 0 .45rem;
+}
+
+.blog-entry-title {
+  font-size: 1.45rem;
+  text-transform: none;
+  letter-spacing: .005em;
+  margin: .3rem 0 0;
+  transition: color .2s ease-in-out;
+}
+
+.blog-entry-link:hover .blog-entry-title {
+  color: var(--accent-color);
+}
+
+/* Two lines of summary sit better ragged-right than justified, which is what
+   main p would otherwise do to them. */
+.blog-summary {
+  text-align: left;
+  hyphens: manual;
+  color: #4F4F4F;
+  margin: .5rem 0 0;
+  max-width: 44em;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .6rem;
+}
+
+.blog-more {
+  display: inline-block;
+  margin-top: .7rem;
+  font-size: .9rem;
+  color: #6A6A6A;
+  transition: color .2s ease-in-out;
+}
+
+.blog-entry-link:hover .blog-more {
+  color: var(--accent-color);
+}
+
+.blog-arrow {
+  display: inline-block;
+  transition: transform .2s ease-in-out;
+}
+
+.blog-entry-link:hover .blog-arrow {
+  transform: translateX(.2rem);
+}
+
+.blog-empty {
+  color: #6A6A6A;
+  margin-top: 2rem;
+}
+
+/* --- A single post --- */
+
+.blog-breadcrumb {
+  font-size: .9rem;
+}
+
+.blog-breadcrumb a {
+  color: #6A6A6A;
+  text-decoration: none;
+}
+
+.blog-breadcrumb a:hover {
+  color: var(--accent-color);
+}
+
+.blog-post-header {
+  margin-top: .75rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-post-title {
+  text-transform: none;
+  letter-spacing: .005em;
+  margin-bottom: .55rem;
+}
+
+/* Prose fills the column it is given, whatever that column turns out to be.
+   Capping it here as well as on the column left a strip of empty page between
+   the end of the lines and the contents beside them — 128 pixels of nothing at
+   a 1920 window, which reads as a layout bug rather than as margin. The measure
+   is bounded once, on .blog-main below. */
+.blog-content {
+  margin-top: 1.75rem;
+  max-width: 100%;
+}
+
+.blog-content h2 {
+  margin-top: 2.4rem;
+  font-size: 1.45rem;
+}
+
+.blog-content h3 {
+  margin-top: 1.8rem;
+  font-size: 1.15rem;
+}
+
+.blog-content h4 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #4F4F4F;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.3rem;
+}
+
+.blog-content li {
+  margin-bottom: .3rem;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: .375rem;
+  margin: 1.5rem 0;
+}
+
+.blog-content figure {
+  margin: 1.75rem 0;
+}
+
+.blog-content figcaption {
+  color: #6A6A6A;
+  font-size: .88rem;
+  margin-top: .5rem;
+}
+
+/* A quote that is not one of the GitHub-style callouts */
+.blog-content blockquote:not(.md-alert) {
+  margin: 1.5rem 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid #ddd;
+  color: #4F4F4F;
+}
+
+.blog-content blockquote:not(.md-alert)>*:last-child {
+  margin-bottom: 0;
+}
+
+.blog-content hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 2.25rem 0;
+}
+
+/* --- Code --- */
+
+.blog-content code {
+  font-size: .87em;
+  background: #f6f6f6;
+  padding: .12em .35em;
+  border-radius: .25rem;
+  color: #111;
+}
+
+.blog-content pre {
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: .4rem;
+  padding: .9rem 1.05rem;
+  overflow-x: auto;
+  font-size: .87rem;
+  line-height: 1.5;
+  margin: 1.4rem 0;
+}
+
+/* Chroma paints its own background on the wrapper; the border is ours. */
+.blog-content .highlight {
+  margin: 1.4rem 0;
+}
+
+.blog-content .highlight pre {
+  margin: 0;
+}
+
+.blog-content pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+/* --- Tables --- */
+
+.blog-content table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: .93rem;
+}
+
+.blog-content th,
+.blog-content td {
+  padding: .5rem .65rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-content th {
+  font-weight: var(--font-weight-normal);
+  border-bottom: 1px solid #ccc;
+}
+
+/* --- Math ---
+   A wide displayed equation should scroll inside its own box rather than push
+   the whole page sideways on a phone. */
+.blog-content .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: .35rem 0;
+}
+
+/* Computer Modern next to Montserrat Light is the heavier of the two by some
+   margin, so the formulas are thinned with grayscale antialiasing and set a
+   shade lighter than the text rather than being scaled down.
+
+   The size is what makes a formula sit level with the words around it, and the
+   two fonts disagree about it: per pixel of font-size Montserrat Light has an
+   x-height of .522 and KaTeX_Math one of .442. At a common font-size the maths
+   therefore reads about 15% short. 1.18em is .522/.442, which puts a variable
+   in a sentence at the same height as the letters beside it. */
+.blog-content .katex {
+  font-size: 1.18em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+/* A displayed formula stands alone, so it takes the same size rather than a
+   larger one, and the page keeps a single x-height throughout. */
+.blog-content .katex-display>.katex {
+  font-size: 1.18em;
+}
+
+/* --- Footnotes --- */
+
+.blog-content .footnotes {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: .9rem;
+  color: #4F4F4F;
+}
+
+/* --- Post layout ---
+   One column of prose, and on a wide screen a second, narrower one holding the
+   contents. Without contents the prose is centred instead of hugging the left
+   edge of a container it cannot fill. */
+
+/* Stacked, and bounded as a whole. The measure belongs on the layout rather
+   than on the prose alone: with it on the prose, the folded-away contents above
+   it kept the container's full width and sat wider than the text it belonged
+   to, offset to the left of it. */
+.blog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  max-width: 52em;
+  margin-inline: auto;
+}
+
+/* The second column starts at 1200 rather than 992 because that is where there
+   is room for it without the prose lurching: just below, the single column is
+   832 wide; just above, with the contents beside it, 808. Dragging the window
+   across the breakpoint barely moves the text. */
+@media (min-width: 1200px) {
+  .blog-layout.has-toc {
+    max-width: none;
+    margin-inline: 0;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: 3.5rem;
+  }
+
+  /* Source order puts the contents after the article, which is the right
+     reading order; on screen they belong beside it, from the first line. */
+  .blog-layout.has-toc .blog-toc-col {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* --- Table of contents (opt-in per post) --- */
+
+.blog-toc {
+  font-size: .85rem;
+  line-height: 1.45;
+}
+
+.blog-toc-title {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .72rem;
+  color: #6A6A6A;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.blog-toc-title::-webkit-details-marker {
+  display: none;
+}
+
+.blog-toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.blog-toc ul ul {
+  padding-left: .7rem;
+}
+
+.blog-toc li {
+  margin: 0;
+}
+
+/* The bar on the left is what the current-section marker slides along. */
+.blog-toc a {
+  display: block;
+  padding: .22rem 0 .22rem .7rem;
+  margin-left: -1px;
+  border-left: 1px solid #eee;
+  text-decoration: none;
+  color: #6A6A6A;
+  transition: color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.blog-toc ul ul a {
+  font-size: .95em;
+  color: #8a8a8a;
+}
+
+.blog-toc a:hover {
+  color: #111;
+  border-left-color: #bbb;
+}
+
+.blog-toc a.is-active {
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+}
+
+@media (min-width: 1200px) {
+  /* Follows the reader down the page, and scrolls inside itself if the post
+     has more headings than the viewport has room for. */
+  .blog-toc {
+    position: sticky;
+    top: 5.5rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+  }
+
+  /* A sticky child can only travel as far as its containing block is tall, so
+     the column has to stay stretched to the height of the article beside it —
+     align-self: start would collapse it and nail the contents in place. */
+  .blog-toc-col {
+    align-self: stretch;
+    padding-top: 9.5rem;
+  }
+}
+
+/* Below the sidebar breakpoint it sits above the text, where every line it
+   takes is a line of the post pushed off the screen — so it is boxed, tight,
+   and foldable. */
+@media (max-width: 1199.98px) {
+  .blog-toc {
+    margin-top: 1.5rem;
+    padding: .7rem .9rem;
+    background: #fafafa;
+    border-radius: .4rem;
+  }
+
+  .blog-toc[open] .blog-toc-title {
+    margin-bottom: .4rem;
+  }
+
+  .blog-toc .blog-toc-title {
+    margin-bottom: 0;
+  }
+
+  .blog-toc .blog-toc-title::after {
+    content: "+";
+    margin-left: .4rem;
+  }
+
+  .blog-toc[open] .blog-toc-title::after {
+    content: "\2013";
+  }
+
+  .blog-toc a {
+    border-left: 0;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .blog-toc ul ul {
+    padding-left: .9rem;
+  }
+}
+
+/* --- Neighbouring posts --- */
+
+.blog-post-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+}
+
+.blog-post-nav-item {
+  flex: 1 1 14rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* The newer post points back up the list, the older one further down it. */
+.blog-post-nav-item.is-older {
+  text-align: right;
+}
+
+.blog-post-nav-label {
+  display: block;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #6A6A6A;
+}
+
+.blog-post-nav-title {
+  display: block;
+  margin-top: .2rem;
+  transition: color .2s ease-in-out;
+}
+
+.blog-post-nav-item:hover .blog-post-nav-title {
+  color: var(--accent-color);
+}
+
+/* One column on phones, and then the right-aligned item would look like a
+   mistake. */
+@media (max-width: 575.98px) {
+  .blog-post-nav-item.is-older {
+    text-align: left;
+  }
+}
+
+/* --- Citations ---
+   [1] in the running text, linking down to the reference list. Kept small and
+   grey so a paragraph with several of them still reads as a paragraph. */
+.cite {
+  font-size: .85em;
+  color: #6A6A6A;
+  white-space: nowrap;
+}
+
+.cite a {
+  color: #6A6A6A;
+  text-decoration: none;
+}
+
+.cite a:hover {
+  color: var(--accent-color);
+}
+
+/* The reference list borrows the shape of the publications page: title first,
+   authors under it, venue in a badge. */
+.blog-notes {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+}
+
+.blog-notes h2 {
+  font-size: 1.15rem;
+  margin-top: 0;
+}
+
+.blog-notes-sub {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #6A6A6A;
+  margin: 1.6rem 0 .6rem;
+}
+
+.blog-notes-sub:first-of-type {
+  margin-top: 1.2rem;
+}
+
+/* Hugo's footnote block brings its own rule; the section already has one. */
+.blog-notes .footnotes hr {
+  display: none;
+}
+
+.blog-notes .footnotes {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: .95rem;
+}
+
+.blog-notes .footnotes ol {
+  padding-left: 1.4rem;
+  margin-top: 0;
+}
+
+/* The bibliography of a paper: one two-column grid for the whole list, the
+   labels in the left column and the entries in the right. Because all of them
+   are items of the same grid, the column is as wide as the widest label and
+   every entry starts on the same vertical line. */
+.blog-ref-list {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 1rem;
+  row-gap: 1.1rem;
+  margin: 0;
+  font-size: .95rem;
+}
+
+.blog-ref-label {
+  grid-column: 1;
+  font-weight: var(--font-weight-thin);
+  color: #6A6A6A;
+  white-space: nowrap;
+  /* the label is the anchor a citation jumps to */
+  scroll-margin-top: 5rem;
+}
+
+.blog-ref-body {
+  grid-column: 2;
+  margin: 0;
+}
+
+/* Arriving from a citation, both halves of the row light up. */
+.blog-ref-label:target,
+.blog-ref-label:target+.blog-ref-body .blog-ref-title {
+  color: var(--accent-color);
+}
+
+.blog-notes .footnotes li {
+  margin-bottom: .5rem;
+}
+
+.blog-notes .footnotes li:target {
+  scroll-margin-top: 5rem;
+}
+
+.blog-notes .footnotes p {
+  text-align: left;
+  hyphens: manual;
+  margin-bottom: 0;
+}
+
+/* The little arrow back up to the place the note was called from. */
+.footnote-backref {
+  text-decoration: none;
+  color: #9a9a9a;
+}
+
+.footnote-backref:hover {
+  color: var(--accent-color);
+}
+
+/* The marker in the running text, matching the [n] of a citation. */
+.footnote-ref {
+  font-size: .85em;
+}
+
+.footnote-ref a {
+  text-decoration: none;
+  color: #6A6A6A;
+}
+
+.footnote-ref a:hover {
+  color: var(--accent-color);
+}
+
+sup[id^="fnref"] {
+  scroll-margin-top: 5rem;
+}
+
+/* Underlined from the start: a reference the reader cannot tell is a link is
+   a reference they will not follow. The arrow says it opens elsewhere. */
+.blog-ref-title a {
+  text-decoration: underline;
+  text-decoration-thickness: .75px;
+  text-underline-offset: .15em;
+}
+
+.blog-ref-title a[href^="http"]::after {
+  content: "\2197";
+  display: inline-block;
+  margin-left: .2em;
+  font-size: .85em;
+  color: #9a9a9a;
+  text-decoration: none;
+}
+
+.blog-ref-title a:hover,
+.blog-ref-title a:hover::after {
+  color: var(--accent-color);
+}
+
+.blog-ref-authors {
+  color: #6A6A6A;
+  font-size: .9em;
+  margin-top: .1rem;
+}
+
+/* Headings inside a post are link targets too (from the table of contents). */
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  scroll-margin-top: 5rem;
+}
+
+/* --- Theorem-like environments ---
+   Visual siblings of the GitHub-style callouts above: the same tinted panel and
+   coloured left rule, so a post reads as one system. Three colours rather than
+   nine — results, definitions, and asides — because the label already says
+   which environment it is, and nine tints would turn a page into a palette.
+   Proofs get no panel at all; in a paper they are the connective tissue, not a
+   highlight. */
+
+.thm {
+  margin: 1.6rem 0;
+  padding: .7rem 1.05rem;
+  border-left: .25rem solid var(--thm-color, #888);
+  background: color-mix(in srgb, var(--thm-color, #888) 6%, transparent);
+  border-radius: 0 .4rem .4rem 0;
+  scroll-margin-top: 5rem;
+}
+
+.thm>*:last-child {
+  margin-bottom: 0;
+}
+
+.thm-title {
+  font-weight: var(--font-weight-normal);
+  color: var(--thm-color);
+  margin-bottom: .35rem;
+  text-align: left;
+  hyphens: manual;
+}
+
+/* The optional name in brackets after the number */
+.thm-name {
+  color: #4F4F4F;
+}
+
+/* Results */
+.thm-theorem,
+.thm-lemma,
+.thm-corollary,
+.thm-proposition,
+.thm-claim {
+  --thm-color: var(--accent-color);
+}
+
+/* Definitions */
+.thm-definition {
+  --thm-color: #8250df;
+}
+
+/* Asides */
+.thm-remark,
+.thm-example {
+  --thm-color: #6A6A6A;
+}
+
+/* Proof: no panel, a hairline rule, and the box at the end */
+.thm-proof {
+  --thm-color: #ddd;
+  background: none;
+  border-left-width: 1px;
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.thm-proof .thm-title {
+  color: #4F4F4F;
+  font-style: italic;
+}
+
+/* Floated so it rides on the last line of the proof rather than starting a
+   line of its own underneath it. */
+.thm-qed::after {
+  content: "\25A1";
+  float: right;
+  color: #6A6A6A;
+  line-height: 1;
+}
+
+.thm-proof::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* --- Draft marker ---
+   Amber, like the "warning" callout, and the one thing on the entry that is
+   neither grey nor black — a draft should be impossible to mistake for a post
+   that is live. It can only ever appear locally: the production build drops
+   drafts before they are rendered. */
+.blog-draft {
+  display: inline-block;
+  margin-right: .55rem;
+  padding: 0 .45rem;
+  border: 1px solid color-mix(in srgb, #9a6700 30%, transparent);
+  border-radius: .25rem;
+  background: color-mix(in srgb, #9a6700 10%, transparent);
+  color: #9a6700;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  vertical-align: .05em;
+}
+
+/* --- Abstract ---
+   Set the way a paper sets one: no panel, because the callouts and the theorem
+   environments already own that idiom and a third tinted box at the top of
+   every post would be noise. It earns its place through the label, a slightly
+   smaller and greyer text, and the rule that closes it off from the body. */
+.blog-abstract {
+  margin-top: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #eee;
+  color: #4F4F4F;
+  font-size: .95rem;
+}
+
+.blog-abstract-label {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .72rem;
+  color: #6A6A6A;
+  margin-bottom: .4rem;
+}
+
+.blog-abstract p:last-child {
+  margin-bottom: 0;
+}
+
+/* An abstract is prose, so it is justified like the body — but it is narrow
+   enough that hyphenation has to stay on or the gaps tear open. */
+.blog-abstract p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* The body already has its own top margin; with an abstract above it, the rule
+   between them is the separation and a second gap would be too much. */
+.blog-abstract+.blog-content {
+  margin-top: 1.5rem;
+}
+
+/* --- Heading anchors ---
+   Present for anyone who wants to link to a section, invisible to everyone
+   else. It never takes space of its own, so a heading does not reflow when it
+   appears. */
+.heading-anchor {
+  margin-left: .4rem;
+  color: #ccc;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity .15s ease-in-out, color .15s ease-in-out;
+}
+
+h1:hover>.heading-anchor,
+h2:hover>.heading-anchor,
+h3:hover>.heading-anchor,
+h4:hover>.heading-anchor,
+.heading-anchor:focus {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: var(--accent-color);
+}
+
+/* Anchors are decoration; a heading read aloud should not end in a hash. */
+@media (prefers-reduced-motion: reduce) {
+  .heading-anchor {
+    transition: none;
+  }
+}
+
+/* --- Figures in a post ---
+   An image narrower than the text column sits in the middle of it. The img has
+   to be a block for that: as an inline box it sits on a text baseline, which
+   both left-aligns it and leaves a few pixels of descender space under it. */
+.blog-figure {
+  margin: 1.75rem auto;
+}
+
+.blog-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: .375rem;
+  margin-inline: auto;
+}
+
+.blog-figure figcaption {
+  color: #6A6A6A;
+  font-size: .88rem;
+  margin-top: .6rem;
+  text-align: center;
+  /* a long caption should not run the full width under a narrow drawing */
+  max-width: 42em;
+  margin-inline: auto;
+  text-wrap: pretty;
+}
+
+/* The witness, written \wit, is lowercase blackboard bold. See
+   layouts/_default/_markup/render-passthrough.html for why it arrives as
+   \mathfrak: KaTeX has no lowercase \mathbb and cannot take U+1D568, so the
+   glyph comes from the font instead of from the markup. The file is Noto Sans
+   Math subset to the double-struck lowercase letters, with those letters moved
+   onto the ASCII positions, so a "w" in this family draws a double-struck w. */
+@font-face {
+  font-family: 'KaTeX_Bbold';
+  src: url('/fonts/katex-bbold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.blog-content .katex .mathfrak {
+  font-family: 'KaTeX_Bbold';
+  font-style: normal;
+  /* Noto's double-struck letters are drawn on a larger x-height than KaTeX_Math,
+     53.6 against 44.2 per 100px, so at equal font-size they tower over the
+     italics beside them. Scaling by the ratio lines the two up. */
+  font-size: .825em;
+}
