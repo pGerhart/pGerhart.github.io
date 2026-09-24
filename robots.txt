@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /Logos/
+
+# Diagrams belong to the post that explains them and are not meant to turn up on
+# their own in image search. The blog pages carry "noimageindex" as well; this
+# keeps the files themselves from being fetched for that purpose at all.
+Disallow: /images/blog/
+
+# Keep PDFs out of search results (the HTML pages stay indexable)
+Disallow: /*.pdf$
+
+Sitemap: https://www.paul-gerhart.de/sitemap.xml
