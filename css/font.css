@@ -1,0 +1,23 @@
+/* Montserrat as a variable font: one file per style covers every weight from
+   100 to 900, so the stylesheet can use in-between weights such as 350 rather
+   than only the whole hundreds. Latin subset only, like the static files it
+   replaces (those montserrat-v31-latin-*.woff2 are no longer referenced).
+   Source: @fontsource-variable/montserrat 5.2.8, SIL Open Font License 1.1,
+   see /fonts/montserrat/LICENSE.txt. */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('/fonts/montserrat/montserrat-latin-wght-normal.woff2') format('woff2-variations'),
+         url('/fonts/montserrat/montserrat-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 100 900;
+    src: url('/fonts/montserrat/montserrat-latin-wght-italic.woff2') format('woff2-variations'),
+         url('/fonts/montserrat/montserrat-latin-wght-italic.woff2') format('woff2');
+}
